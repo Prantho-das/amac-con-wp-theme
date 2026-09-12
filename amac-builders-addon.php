@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AMAC Builders Elementor Core
  * Description: Custom pixel-perfect Elementor widgets for AMAC Builders. Every text, button, image, and style is 100% dynamic.
- * Version: 1.3.0
+ * Version: 2.0.0
  * Author: Jarvis
  * Text Domain: amac-builders
  */
@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) exit;
 
 final class AMAC_Elementor_Extension {
 
-    const VERSION = '1.3.0';
+    const VERSION = '2.0.0';
     const MINIMUM_ELEMENTOR_VERSION = '3.0.0';
     const MINIMUM_PHP_VERSION = '7.4';
 
