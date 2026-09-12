@@ -1,0 +1,91 @@
+/* Prevent Horizontal Scrollbar Globally */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box !important;
+}
+
+/* Elementor Canvas Full Width Reset */
+.elementor,
+.elementor-section-wrap,
+.elementor-section {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+    padding: 0 !important;
+}
+
+.elementor-widget-wrap {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Mobile Button Responsive Width */
+@media (max-width: 640px) {
+    button.submit-btn,
+    .submit-btn,
+    .wpcf7-submit,
+    .wpforms-submit {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px 16px !important;
+        box-sizing: border-box !important;
+        font-size: 12px !important;
+        letter-spacing: 0.12em !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* AMAC Testimonials Slider Styling */
+.amac-testimonials-slider-wrapper .swiper-slide {
+    height: auto !important;
+    display: flex !important;
+    box-sizing: border-box !important;
+}
+
+.amac-testimonials-slider-wrapper .swiper-wrapper {
+    align-items: stretch !important;
+}
+
+.amac-swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(147, 132, 111, 0.35);
+    opacity: 1;
+    margin: 0 4px;
+    border-radius: 9999px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.amac-swiper-pagination .swiper-pagination-bullet-active {
+    background: #93846f !important;
+    width: 28px !important;
+    border-radius: 9999px !important;
+}
+
+.amac-swiper-btn:disabled,
+.amac-swiper-btn.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
