@@ -43,7 +43,6 @@ final class AMAC_Elementor_Extension {
         // Enqueue Styles & Scripts
         add_action('wp_enqueue_scripts', [$this, 'enqueue_styles_scripts']);
         add_action('elementor/frontend/after_enqueue_styles', [$this, 'enqueue_styles_scripts']);
-        add_action('wp_footer', [$this, 'render_scroll_reveal_script']);
 
         // AJAX Lead Capture
         add_action('wp_ajax_amac_submit_quote', [$this, 'handle_quote_submission']);
@@ -146,85 +145,6 @@ final class AMAC_Elementor_Extension {
 
         wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], '11.0.0', true);
         wp_enqueue_script('amac-testimonials-slider', plugins_url('assets/js/testimonials-slider.js', __FILE__), ['jquery', 'swiper'], self::VERSION, true);
-    }
-
-    public function render_scroll_reveal_script() {
-        ?>
-        <style>
-            .amac-reveal-init {
-                opacity: 0 !important;
-                transform: translateY(48px) !important;
-                transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
-                will-change: opacity, transform;
-            }
-            .amac-revealed {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
-        </style>
-        <script>
-        (function() {
-            function initScrollEffects() {
-                if (typeof IntersectionObserver === 'undefined') return;
-
-                const targetSelectors = [
-                    '.stats-wrapper .text-center',
-                    '.craftsmanship-section .grid > div',
-                    '.services-section .group',
-                    '.testimonials-wrapper .relative',
-                    '.ledger-item',
-                    '.portfolio-card',
-                    '.amac-story-wrapper .grid > div',
-                    '.amac-values-wrapper .grid > div',
-                    '.amac-timeline-wrapper .flex',
-                    '.amac-about-cta-wrapper',
-                    'section[id*="contact-section"] .grid > div',
-                    'section .mb-12',
-                    'section .mb-16',
-                    'section .max-w-3xl > div',
-                    'section .max-w-2xl'
-                ];
-
-                const targets = document.querySelectorAll(targetSelectors.join(', '));
-                if (!targets.length) return;
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('amac-revealed');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { 
-                    threshold: 0.12, 
-                    rootMargin: '0px 0px -40px 0px' 
-                });
-
-                targets.forEach((el, i) => {
-                    const rect = el.getBoundingClientRect();
-                    // If element is already on initial screen load (e.g. top of page)
-                    if (rect.top < (window.innerHeight * 0.75) && rect.bottom > 0) {
-                        el.classList.add('amac-revealed');
-                    } else {
-                        el.classList.add('amac-reveal-init');
-                        el.style.transitionDelay = ((i % 4) * 0.2) + 's';
-                        observer.observe(el);
-                    }
-                });
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initScrollEffects);
-            } else {
-                initScrollEffects();
-            }
-            window.addEventListener('load', initScrollEffects);
-            if (window.jQuery) {
-                jQuery(window).on('elementor/frontend/init', initScrollEffects);
-            }
-        })();
-        </script>
-        <?php
     }
 }
 
