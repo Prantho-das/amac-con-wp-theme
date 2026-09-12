@@ -140,14 +140,14 @@ class AMAC_CTA_Widget extends \Elementor\Widget_Base {
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <?php if (!empty($settings['btn_text'])): ?>
-                        <a class="amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#1f2c2c] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#93846f] text-[#1f2c2c] font-bold text-sm tracking-[0.2em] uppercase transition-all duration-300 group shadow-lg" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                         <?php endif; ?>
 
                         <?php if (!empty($settings['phone_number'])): ?>
-                        <a href="tel:<?php echo esc_attr($clean_phone); ?>" class="amac-btn-secondary inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#93846f]/40 text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300">
+                        <a href="tel:<?php echo esc_attr($clean_phone); ?>" class="amac-btn-secondary inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#93846f] text-[#FDFCF8] font-semibold text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#93846f] hover:text-[#1f2c2c]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             <span <?php echo $this->get_render_attribute_string('phone_number'); ?>><?php echo esc_html($settings['phone_number']); ?></span>
                         </a>

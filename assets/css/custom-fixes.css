@@ -37,12 +37,152 @@ html, body {
     margin: 0 !important;
 }
 
+/* AMAC Global Luxury Primary Buttons */
+.amac-btn-primary,
+.hero-btn-primary,
+a.hero-btn-primary,
+button.hero-btn-primary {
+    background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
+    color: #1f2c2c !important;
+    font-weight: 700 !important;
+    border: 1px solid #93846f !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 4px 20px rgba(147, 132, 111, 0.35) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.amac-btn-primary:hover,
+.hero-btn-primary:hover,
+a.hero-btn-primary:hover,
+button.hero-btn-primary:hover {
+    background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
+    color: #111a1a !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(147, 132, 111, 0.5) !important;
+}
+
+.amac-btn-primary svg,
+.hero-btn-primary svg {
+    stroke: #1f2c2c !important;
+    color: #1f2c2c !important;
+}
+
+/* AMAC Global Luxury Secondary / Outline Buttons */
+.amac-btn-secondary,
+.hero-gold-border,
+a.hero-gold-border {
+    background-color: transparent !important;
+    color: #FDFCF8 !important;
+    border: 1px solid rgba(147, 132, 111, 0.6) !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.amac-btn-secondary:hover,
+.hero-gold-border:hover,
+a.hero-gold-border:hover {
+    background-color: #93846f !important;
+    color: #1f2c2c !important;
+    border-color: #93846f !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 6px 20px rgba(147, 132, 111, 0.3) !important;
+}
+
+.amac-btn-secondary:hover svg,
+.hero-gold-border:hover svg {
+    stroke: #1f2c2c !important;
+    color: #1f2c2c !important;
+}
+
+/* Global Form & WordPress Button Overrides */
+button.submit-btn,
+.submit-btn,
+.wpcf7-submit,
+.wpcf7 input[type="submit"],
+.wpforms-submit,
+.wpforms-form button[type="submit"],
+input[type="submit"].wpforms-submit,
+.elementor-button,
+.elementor-button-link,
+.elementor-widget-button .elementor-button {
+    background: #1f2c2c !important;
+    color: #FDFCF8 !important;
+    border: 1px solid #93846f !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    font-family: "Inter", sans-serif !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 15px rgba(31, 44, 44, 0.2) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+button.submit-btn:hover,
+.submit-btn:hover,
+.wpcf7-submit:hover,
+.wpcf7 input[type="submit"]:hover,
+.wpforms-submit:hover,
+.wpforms-form button[type="submit"]:hover,
+input[type="submit"].wpforms-submit:hover,
+.elementor-button:hover,
+.elementor-button-link:hover,
+.elementor-widget-button .elementor-button:hover {
+    background: #93846f !important;
+    color: #1f2c2c !important;
+    border-color: #93846f !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(147, 132, 111, 0.35) !important;
+}
+
+/* Header Quote Button Refinement */
+.header-quote-btn {
+    background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
+    color: #1f2c2c !important;
+    font-weight: 700 !important;
+    border: 1px solid #93846f !important;
+    box-shadow: 0 4px 15px rgba(147, 132, 111, 0.3) !important;
+}
+
+.header-quote-btn:hover {
+    background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
+    color: #111a1a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(147, 132, 111, 0.45) !important;
+}
+
+#amac-site-header.is-scrolled .header-quote-btn {
+    background: #1f2c2c !important;
+    color: #FDFCF8 !important;
+    border-color: #1f2c2c !important;
+}
+
+#amac-site-header.is-scrolled .header-quote-btn:hover {
+    background: #93846f !important;
+    color: #1f2c2c !important;
+    border-color: #93846f !important;
+}
+
 /* Mobile Button Responsive Width */
 @media (max-width: 640px) {
     button.submit-btn,
     .submit-btn,
     .wpcf7-submit,
-    .wpforms-submit {
+    .wpforms-submit,
+    .hero-btn-group a,
+    .amac-btn-primary,
+    .amac-btn-secondary {
         width: 100% !important;
         max-width: 100% !important;
         padding: 15px 16px !important;
@@ -88,4 +228,3 @@ html, body {
     cursor: not-allowed;
     pointer-events: none;
 }
-

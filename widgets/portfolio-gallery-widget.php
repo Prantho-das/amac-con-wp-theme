@@ -170,15 +170,16 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .filter-btn {
                 background: transparent;
-                border: 1px solid rgba(147, 132, 111, 0.3) !important;
-                color: rgba(26, 26, 26, 0.6) !important;
+                border: 1px solid rgba(147, 132, 111, 0.4) !important;
+                color: rgba(31, 44, 44, 0.75) !important;
                 cursor: pointer;
                 outline: none;
-                transition: all 0.3s ease;
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
                 padding: 10px 22px !important;
                 font-size: 12px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
+                font-weight: 500 !important;
                 display: inline-flex !important;
                 align-items: center !important;
                 justify-content: center !important;
@@ -187,12 +188,14 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .filter-btn:hover {
                 border-color: #93846f !important;
                 color: #1f2c2c !important;
-                background: transparent !important;
+                background: rgba(147, 132, 111, 0.12) !important;
+                transform: translateY(-1px);
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .filter-btn.is-active {
                 background-color: #1f2c2c !important;
                 color: #FDFCF8 !important;
-                border-color: #1f2c2c !important;
+                border-color: #93846f !important;
+                box-shadow: 0 4px 12px rgba(31, 44, 44, 0.25) !important;
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .portfolio-card {
                 background-color: #F5F1EB;
@@ -362,14 +365,14 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 box-sizing: border-box;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn {
-                background-color: #1f2c2c !important;
-                color: #FFFFFF !important;
+                background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
+                color: #1f2c2c !important;
                 border: 1px solid #93846f !important;
                 padding: 14px 20px !important;
                 font-size: 12px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
-                font-weight: 600 !important;
+                font-weight: 700 !important;
                 text-decoration: none !important;
                 display: flex !important;
                 align-items: center !important;
@@ -377,20 +380,20 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 gap: 10px !important;
                 width: 100% !important;
                 box-sizing: border-box !important;
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease !important;
-                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease !important;
+                box-shadow: 0 4px 18px rgba(147, 132, 111, 0.35) !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn:hover {
-                background-color: #2a3d3d !important;
-                color: #FFFFFF !important;
+                background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
+                color: #111a1a !important;
                 border-color: #a69580 !important;
-                transform: scale(1.04) !important;
-                box-shadow: 0 8px 24px rgba(31, 44, 44, 0.5) !important;
+                transform: scale(1.04) translateY(-2px) !important;
+                box-shadow: 0 8px 24px rgba(147, 132, 111, 0.5) !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn span,
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn svg {
-                color: #FFFFFF !important;
-                stroke: #FFFFFF !important;
+                color: #1f2c2c !important;
+                stroke: #1f2c2c !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-close-btn {
                 background: transparent;

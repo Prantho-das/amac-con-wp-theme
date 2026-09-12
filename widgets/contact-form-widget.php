@@ -257,23 +257,28 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 gap: 12px !important;
                 background-color: #1f2c2c !important;
                 color: #FDFCF8 !important;
-                border: none !important;
+                border: 1px solid #93846f !important;
                 border-radius: 0px !important;
                 padding: 16px 36px !important;
                 font-size: 13px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
                 cursor: pointer !important;
-                transition: all 0.3s ease !important;
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
                 font-weight: 600 !important;
                 font-family: "Inter", sans-serif !important;
                 box-sizing: border-box !important;
                 max-width: 100% !important;
+                box-shadow: 0 4px 15px rgba(31, 44, 44, 0.2) !important;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form input[type="submit"]:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpforms-submit:hover {
-                background-color: #2a3d3d !important;
+                background-color: #93846f !important;
+                color: #1f2c2c !important;
+                border-color: #93846f !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 20px rgba(147, 132, 111, 0.35) !important;
             }
             @media (max-width: 640px) {
                 #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn,

@@ -318,27 +318,38 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
                 background-color: rgba(31, 44, 44, 0.2) !important;
             }
             .hero-btn-primary {
-                background-color: #1f2c2c !important;
-                color: #FDFCF8 !important;
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
+                background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
+                color: #1f2c2c !important;
+                font-weight: 700 !important;
+                border: 1px solid #93846f !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, box-shadow 0.3s ease !important;
                 transform-origin: center;
                 text-decoration: none !important;
+                box-shadow: 0 10px 25px -5px rgba(147, 132, 111, 0.4) !important;
             }
             .hero-btn-primary:hover {
-                background-color: #2a3d3d !important;
-                color: #FFFFFF !important;
-                transform: scale(1.05) !important;
-                box-shadow: 0 10px 25px -5px rgba(31, 44, 44, 0.4) !important;
+                background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
+                color: #111a1a !important;
+                transform: scale(1.05) translateY(-2px) !important;
+                box-shadow: 0 15px 30px -5px rgba(147, 132, 111, 0.55) !important;
+            }
+            .hero-btn-primary svg {
+                stroke: #1f2c2c !important;
+                color: #1f2c2c !important;
             }
             .hero-gold-border {
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, color 0.3s ease !important;
+                border: 1px solid rgba(147, 132, 111, 0.6) !important;
+                color: #FDFCF8 !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
                 transform-origin: center;
                 text-decoration: none !important;
             }
             .hero-gold-border:hover {
+                background-color: #93846f !important;
                 border-color: #93846f !important;
-                color: #FFFFFF !important;
-                transform: scale(1.05) !important;
+                color: #1f2c2c !important;
+                transform: scale(1.05) translateY(-2px) !important;
+                box-shadow: 0 10px 25px -5px rgba(147, 132, 111, 0.35) !important;
             }
             .hero-reviews-link {
                 text-decoration: none !important;

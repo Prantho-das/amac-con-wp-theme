@@ -282,19 +282,35 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
             .header-quote-btn {
                 margin-left: 1rem !important;
                 padding: 0.625rem 1.5rem !important;
-                background-color: #1f2c2c !important;
-                color: #FDFCF8 !important;
+                background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
+                color: #1f2c2c !important;
+                font-weight: 700 !important;
+                border: 1px solid #93846f !important;
                 font-size: 0.875rem !important;
                 letter-spacing: 0.15em !important;
                 text-transform: uppercase !important;
                 text-decoration: none !important;
-                transition: background-color 0.3s ease !important;
+                transition: all 0.3s ease !important;
                 display: inline-flex !important;
                 align-items: center !important;
                 justify-content: center !important;
+                box-shadow: 0 4px 15px rgba(147, 132, 111, 0.3) !important;
             }
             .header-quote-btn:hover {
-                background-color: #2a3d3d !important;
+                background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
+                color: #111a1a !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 20px rgba(147, 132, 111, 0.45) !important;
+            }
+            #amac-site-header.is-scrolled .header-quote-btn {
+                background: #1f2c2c !important;
+                color: #FDFCF8 !important;
+                border-color: #1f2c2c !important;
+            }
+            #amac-site-header.is-scrolled .header-quote-btn:hover {
+                background: #93846f !important;
+                color: #1f2c2c !important;
+                border-color: #93846f !important;
             }
             #amac-menu-toggle {
                 display: none !important;
