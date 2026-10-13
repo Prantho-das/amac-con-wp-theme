@@ -142,14 +142,14 @@ class AMAC_About_Story_Widget extends \Elementor\Widget_Base {
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <!-- Text Column -->
                     <div>
-                        <p class="text-[#93846f] text-xs tracking-[0.35em] uppercase mb-4" <?php echo $this->get_render_attribute_string('story_eyebrow'); ?>>
+                        <p class="text-[#C5A059] text-xs tracking-[0.35em] uppercase mb-4" <?php echo $this->get_render_attribute_string('story_eyebrow'); ?>>
                             <?php echo esc_html($settings['story_eyebrow']); ?>
                         </p>
-                        <h2 class="font-display text-3xl md:text-4xl font-semibold text-[#1f2c2c] leading-tight mb-6">
+                        <h2 class="font-display text-3xl md:text-4xl font-semibold text-[#5D0D15] leading-tight mb-6">
                             <span <?php echo $this->get_render_attribute_string('story_title_line1'); ?>><?php echo esc_html($settings['story_title_line1']); ?></span><br>
-                            <span class="text-[#93846f]" <?php echo $this->get_render_attribute_string('story_title_highlight'); ?>><?php echo esc_html($settings['story_title_highlight']); ?></span>
+                            <span class="text-[#C5A059]" <?php echo $this->get_render_attribute_string('story_title_highlight'); ?>><?php echo esc_html($settings['story_title_highlight']); ?></span>
                         </h2>
-                        <div class="h-[2px] w-16 bg-[#93846f] mb-8"></div>
+                        <div class="h-[2px] w-16 bg-[#C5A059] mb-8"></div>
                         <div class="space-y-5 text-[#1A1A1A]/70 text-base md:text-lg leading-relaxed">
                             <p <?php echo $this->get_render_attribute_string('story_p1'); ?>><?php echo esc_html($settings['story_p1']); ?></p>
                             <p <?php echo $this->get_render_attribute_string('story_p2'); ?>><?php echo esc_html($settings['story_p2']); ?></p>
@@ -159,10 +159,10 @@ class AMAC_About_Story_Widget extends \Elementor\Widget_Base {
 
                     <!-- Image Column with Gold Brackets -->
                     <div class="relative group">
-                        <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
                         <div class="overflow-hidden aspect-[4/5]">
                             <img src="<?php echo esc_url($img_url); ?>" alt="Danny O'Connor - Master Builder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         </div>

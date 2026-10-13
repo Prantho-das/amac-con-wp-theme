@@ -126,7 +126,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Title Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#1f2c2c',
+                'default' => '#5D0D15',
                 'selectors' => [
                     '{{WRAPPER}} .craft-title' => 'color: {{VALUE}};',
                 ],
@@ -138,7 +138,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Accent Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#93846f',
+                'default' => '#C5A059',
                 'selectors' => [
                     '{{WRAPPER}} .craft-gold' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .craft-gold-border' => 'border-color: {{VALUE}};',
@@ -166,10 +166,10 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div class="relative group">
                         <!-- Corner Gold Borders -->
-                        <div class="craft-gold-border absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="craft-gold-border absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="craft-gold-border absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="craft-gold-border absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#93846f] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="craft-gold-border absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="craft-gold-border absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="craft-gold-border absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="craft-gold-border absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#C5A059] z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
                         
                         <div class="overflow-hidden aspect-square">
                             <?php if ($img_url): ?>
@@ -180,17 +180,17 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
 
                     <div>
                         <?php if (!empty($settings['eyebrow'])): ?>
-                        <p class="craft-gold text-[#93846f] text-xs tracking-[0.35em] uppercase mb-4" <?php echo $this->get_render_attribute_string('eyebrow'); ?>>
+                        <p class="craft-gold text-[#C5A059] text-xs tracking-[0.35em] uppercase mb-4" <?php echo $this->get_render_attribute_string('eyebrow'); ?>>
                             <?php echo esc_html($settings['eyebrow']); ?>
                         </p>
                         <?php endif; ?>
 
-                        <h2 class="craft-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1f2c2c] leading-tight mb-6">
+                        <h2 class="craft-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-[#5D0D15] leading-tight mb-6">
                             <span <?php echo $this->get_render_attribute_string('title_main'); ?>><?php echo esc_html($settings['title_main']); ?></span><br>
-                            <span class="craft-gold text-[#93846f]" <?php echo $this->get_render_attribute_string('title_highlight'); ?>><?php echo esc_html($settings['title_highlight']); ?></span>
+                            <span class="craft-gold text-[#C5A059]" <?php echo $this->get_render_attribute_string('title_highlight'); ?>><?php echo esc_html($settings['title_highlight']); ?></span>
                         </h2>
 
-                        <div class="craft-gold-bg h-[2px] w-16 bg-[#93846f] mb-8"></div>
+                        <div class="craft-gold-bg h-[2px] w-16 bg-[#C5A059] mb-8"></div>
 
                         <?php if (!empty($settings['para1'])): ?>
                         <p class="text-[#1A1A1A]/70 text-base md:text-lg leading-relaxed mb-6" <?php echo $this->get_render_attribute_string('para1'); ?>>
@@ -205,7 +205,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
                         <?php endif; ?>
 
                         <?php if (!empty($settings['btn_text'])): ?>
-                        <a class="craft-title inline-flex items-center gap-3 text-[#1f2c2c] text-sm tracking-[0.15em] uppercase hover:text-[#93846f] transition-colors group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="craft-title inline-flex items-center gap-3 text-[#5D0D15] text-sm tracking-[0.15em] uppercase hover:text-[#C5A059] transition-colors group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>

@@ -322,7 +322,7 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Headings Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#93846f',
+                'default' => '#C5A059',
                 'selectors' => [
                     '{{WRAPPER}} .amac-footer-gold' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .amac-footer-icon' => 'color: {{VALUE}} !important;',
@@ -355,10 +355,10 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 transition: color 0.3s ease;
             }
             .amac-footer-wrapper a:hover {
-                color: #93846f !important;
+                color: #C5A059 !important;
             }
             .amac-footer-wrapper svg {
-                color: #93846f !important;
+                color: #C5A059 !important;
                 flex-shrink: 0;
             }
             #amac-floating-quick-bar {
@@ -369,7 +369,7 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                background-color: #1f2c2c;
+                background-color: #5D0D15;
                 color: #FDFCF8;
                 padding: 12px 20px;
                 border-radius: 2px;
@@ -395,13 +395,13 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 transition: color 0.3s ease;
             }
             #amac-floating-quick-bar a:hover {
-                color: #93846f !important;
+                color: #C5A059 !important;
             }
             #amac-floating-quick-bar svg {
-                color: #93846f !important;
+                color: #C5A059 !important;
             }
             #amac-floating-quick-bar .divider {
-                color: rgba(147, 132, 111, 0.4);
+                color: rgba(197, 160, 89, 0.4);
             }
             #amac-dismiss-quick-bar {
                 background: transparent;
@@ -433,7 +433,7 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                             <h3 class="font-display text-2xl text-[#FDFCF8] tracking-wider mb-2" <?php echo $this->get_render_attribute_string('brand_name'); ?>>
                                 <?php echo esc_html($settings['brand_name']); ?>
                             </h3>
-                            <p class="amac-footer-gold text-[#93846f] text-xs tracking-[0.3em] uppercase mb-6" <?php echo $this->get_render_attribute_string('brand_tagline'); ?>>
+                            <p class="amac-footer-gold text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-6" <?php echo $this->get_render_attribute_string('brand_tagline'); ?>>
                                 <?php echo esc_html($settings['brand_tagline']); ?>
                             </p>
                         <?php endif; ?>
@@ -444,7 +444,7 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
 
                     <!-- Navigation Column -->
                     <div>
-                        <h4 class="amac-footer-gold text-[#93846f] text-xs tracking-[0.3em] uppercase mb-6">Navigation</h4>
+                        <h4 class="amac-footer-gold text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-6">Navigation</h4>
                         <div class="flex flex-col gap-3">
                             <?php 
                             if (!empty($settings['footer_menu'])):
@@ -464,25 +464,25 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
 
                     <!-- Contact Details Column -->
                     <div>
-                        <h4 class="amac-footer-gold text-[#93846f] text-xs tracking-[0.3em] uppercase mb-6">Contact</h4>
+                        <h4 class="amac-footer-gold text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-6">Contact</h4>
                         <div class="flex flex-col gap-4">
                             <?php if (!empty($settings['phone'])): ?>
                             <a href="tel:<?php echo esc_attr($clean_phone); ?>" class="amac-footer-link flex items-center gap-3 text-sm transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#93846f]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A059]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                 <span><?php echo esc_html($settings['phone']); ?></span>
                             </a>
                             <?php endif; ?>
 
                             <?php if (!empty($settings['email'])): ?>
                             <a href="mailto:<?php echo esc_attr($settings['email']); ?>" class="amac-footer-link flex items-center gap-3 text-sm transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#93846f]"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A059]"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                                 <span><?php echo esc_html($settings['email']); ?></span>
                             </a>
                             <?php endif; ?>
 
                             <?php if (!empty($settings['location'])): ?>
                             <div class="flex items-center gap-3 text-sm text-[#FDFCF8]/80">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#93846f]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#C5A059]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span><?php echo esc_html($settings['location']); ?></span>
                             </div>
                             <?php endif; ?>

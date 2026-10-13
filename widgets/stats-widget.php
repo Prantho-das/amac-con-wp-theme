@@ -92,7 +92,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Background Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#1f2c2c',
+                'default' => '#5D0D15',
                 'selectors' => [
                     '{{WRAPPER}} .stats-wrapper' => 'background-color: {{VALUE}};',
                 ],
@@ -104,7 +104,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Number Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#93846f',
+                'default' => '#C5A059',
                 'selectors' => [
                     '{{WRAPPER}} .stat-number' => 'color: {{VALUE}};',
                 ],
@@ -118,7 +118,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
         $settings = $this->get_settings_for_display();
         if (empty($settings['stats_list'])) return;
         ?>
-        <section class="stats-wrapper bg-[#1f2c2c] py-12 md:py-16">
+        <section class="stats-wrapper bg-[#5D0D15] py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-6 md:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
                     <?php 
@@ -133,7 +133,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
                         <?php if ($has_link): ?>
                         <a href="<?php echo esc_url($item['stat_link']['url']); ?>" <?php echo !empty($item['stat_link']['is_external']) ? 'target="_blank"' : ''; ?> class="inline-block transition-transform hover:scale-105" style="text-decoration: none;">
                         <?php endif; ?>
-                            <p class="stat-number font-display text-3xl md:text-4xl text-[#93846f] font-semibold" <?php echo $this->get_render_attribute_string($num_key); ?>>
+                            <p class="stat-number font-display text-3xl md:text-4xl text-[#C5A059] font-semibold" <?php echo $this->get_render_attribute_string($num_key); ?>>
                                 <?php echo esc_html($item['stat_number']); ?>
                             </p>
                             <p class="mt-2 text-[#FDFCF8]/60 text-xs tracking-[0.2em] uppercase" <?php echo $this->get_render_attribute_string($label_key); ?>>

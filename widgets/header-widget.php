@@ -266,7 +266,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 color: #1A1A1A !important;
             }
             #amac-site-header a.desktop-nav-link:hover {
-                color: #93846f !important;
+                color: #C5A059 !important;
             }
             #amac-site-header #header-logo-text {
                 font-family: "Fraunces", Georgia, serif !important;
@@ -277,40 +277,24 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 transition: color 0.5s ease !important;
             }
             #amac-site-header.is-scrolled #header-logo-text {
-                color: #1f2c2c !important;
+                color: #5D0D15 !important;
             }
             .header-quote-btn {
                 margin-left: 1rem !important;
                 padding: 0.625rem 1.5rem !important;
-                background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
-                color: #1f2c2c !important;
-                font-weight: 700 !important;
-                border: 1px solid #93846f !important;
+                background-color: #5D0D15 !important;
+                color: #FDFCF8 !important;
                 font-size: 0.875rem !important;
                 letter-spacing: 0.15em !important;
                 text-transform: uppercase !important;
                 text-decoration: none !important;
-                transition: all 0.3s ease !important;
+                transition: background-color 0.3s ease !important;
                 display: inline-flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                box-shadow: 0 4px 15px rgba(147, 132, 111, 0.3) !important;
             }
             .header-quote-btn:hover {
-                background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
-                color: #111a1a !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 6px 20px rgba(147, 132, 111, 0.45) !important;
-            }
-            #amac-site-header.is-scrolled .header-quote-btn {
-                background: #1f2c2c !important;
-                color: #FDFCF8 !important;
-                border-color: #1f2c2c !important;
-            }
-            #amac-site-header.is-scrolled .header-quote-btn:hover {
-                background: #93846f !important;
-                color: #1f2c2c !important;
-                border-color: #93846f !important;
+                background-color: #7A1520 !important;
             }
             #amac-menu-toggle {
                 display: none !important;
@@ -326,7 +310,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
             }
             .amac-hamburger-label span {
                 display: block !important;
-                background-color: #93846f !important;
+                background-color: #C5A059 !important;
                 height: 2px !important;
                 margin: 5px 0 !important;
                 transition: all 0.3s ease !important;
@@ -352,7 +336,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 width: 100vw !important;
                 height: 100vh !important;
                 height: 100dvh !important;
-                background-color: #1f2c2c !important;
+                background-color: #5D0D15 !important;
                 z-index: 2147483647 !important;
                 flex-direction: column !important;
                 justify-content: space-between !important;
@@ -380,7 +364,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                         <span id="header-logo-text" class="font-display text-xl tracking-wider font-semibold transition-colors duration-500 text-white" <?php echo $this->get_render_attribute_string('logo_text'); ?>>
                             <?php echo esc_html($settings['logo_text']); ?>
                         </span>
-                        <span class="hidden sm:block text-xs tracking-[0.3em] uppercase transition-colors duration-500 text-[#93846f]" <?php echo $this->get_render_attribute_string('logo_subtext'); ?>>
+                        <span class="hidden sm:block text-xs tracking-[0.3em] uppercase transition-colors duration-500 text-[#C5A059]" <?php echo $this->get_render_attribute_string('logo_subtext'); ?>>
                             <?php echo esc_html($settings['logo_subtext']); ?>
                         </span>
                     <?php endif; ?>
@@ -393,7 +377,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                         foreach ($settings['menu_items'] as $item): 
                             $is_current = (trim($item['link']['url'], '/') === trim($current_url, '/'));
                     ?>
-                        <a class="desktop-nav-link text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-[#93846f] text-white/90" href="<?php echo esc_url($item['link']['url']); ?>" <?php echo $item['link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="desktop-nav-link text-sm tracking-[0.15em] uppercase transition-colors duration-300 hover:text-[#C5A059] text-white/90" href="<?php echo esc_url($item['link']['url']); ?>" <?php echo $item['link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <?php echo esc_html($item['label']); ?>
                         </a>
                     <?php 
@@ -401,7 +385,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                     endif;
                     ?>
                     <?php if (!empty($settings['btn_text'])): ?>
-                    <a class="header-quote-btn ml-4 px-6 py-2.5 bg-[#1f2c2c] text-[#FDFCF8] text-sm tracking-[0.15em] uppercase hover:bg-[#2a3d3d] transition-colors duration-300" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
+                    <a class="header-quote-btn ml-4 px-6 py-2.5 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.15em] uppercase hover:bg-[#7A1520] transition-colors duration-300" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
                         <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
                     </a>
                     <?php endif; ?>
@@ -423,8 +407,8 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 <?php else: ?>
                     <span style="font-family: 'Fraunces', Georgia, serif !important; font-size: 1.25rem !important; color: #FDFCF8 !important; font-weight: 600 !important; letter-spacing: 0.05em !important;"><?php echo esc_html($settings['logo_text']); ?></span>
                 <?php endif; ?>
-                <label for="amac-menu-toggle" id="close-mobile-menu" aria-label="Close menu" onclick="var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" style="background: transparent !important; border: none !important; cursor: pointer !important; padding: 8px !important; color: #93846f !important; outline: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#93846f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <label for="amac-menu-toggle" id="close-mobile-menu" aria-label="Close menu" onclick="var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" style="background: transparent !important; border: none !important; cursor: pointer !important; padding: 8px !important; color: #C5A059 !important; outline: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </label>
             </div>
             <nav style="display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 28px !important; padding: 32px 0 !important; flex: 1 !important;">
@@ -440,14 +424,14 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 endif;
                 ?>
                 <?php if (!empty($settings['btn_text'])): ?>
-                    <a href="<?php echo esc_url($settings['btn_link']['url']); ?>" onclick="document.getElementById('amac-menu-toggle').checked=false; var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" class="header-quote-btn" style="text-decoration: none !important; background-color: #1f2c2c !important; color: #FFFFFF !important; padding: 14px 36px !important; font-size: 12px !important; letter-spacing: 0.2em !important; font-weight: 600 !important; text-transform: uppercase !important; margin-top: 12px !important; display: inline-block !important; border: 1px solid #93846f !important;">
+                    <a href="<?php echo esc_url($settings['btn_link']['url']); ?>" onclick="document.getElementById('amac-menu-toggle').checked=false; var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" class="header-quote-btn" style="text-decoration: none !important; background-color: #5D0D15 !important; color: #FFFFFF !important; padding: 14px 36px !important; font-size: 12px !important; letter-spacing: 0.2em !important; font-weight: 600 !important; text-transform: uppercase !important; margin-top: 12px !important; display: inline-block !important; border: 1px solid #C5A059 !important;">
                         <?php echo esc_html($settings['btn_text']); ?>
                     </a>
                 <?php endif; ?>
             </nav>
             <?php if (!empty($settings['phone_number'])): ?>
             <div style="padding: 0 24px 40px !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important; flex-shrink: 0 !important;">
-                <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', $settings['phone_number'])); ?>" style="text-decoration: none !important; color: #93846f !important; font-size: 14px !important; letter-spacing: 0.2em !important;">
+                <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', $settings['phone_number'])); ?>" style="text-decoration: none !important; color: #C5A059 !important; font-size: 14px !important; letter-spacing: 0.2em !important;">
                     <?php echo esc_html($settings['phone_number']); ?>
                 </a>
             </div>

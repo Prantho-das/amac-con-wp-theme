@@ -95,16 +95,16 @@ class AMAC_About_CTA_Widget extends \Elementor\Widget_Base {
         <section class="relative py-20 md:py-28 overflow-hidden w-full">
             <div class="absolute inset-0">
                 <img src="<?php echo esc_url($bg_url); ?>" alt="Background" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-[#1f2c2c]/80"></div>
+                <div class="absolute inset-0 bg-[#5D0D15]/80"></div>
             </div>
             <div class="relative z-10 max-w-3xl mx-auto px-6 md:px-8 text-center">
-                <p class="text-[#93846f] text-xs tracking-[0.35em] uppercase mb-6" <?php echo $this->get_render_attribute_string('cta_eyebrow'); ?>>
+                <p class="text-[#C5A059] text-xs tracking-[0.35em] uppercase mb-6" <?php echo $this->get_render_attribute_string('cta_eyebrow'); ?>>
                     <?php echo esc_html($settings['cta_eyebrow']); ?>
                 </p>
                 <h2 class="font-display text-3xl md:text-4xl text-[#FDFCF8] font-semibold mb-8" <?php echo $this->get_render_attribute_string('cta_title'); ?>>
                     <?php echo esc_html($settings['cta_title']); ?>
                 </h2>
-                <a class="hero-gold-border amac-btn-secondary inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#93846f] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group font-semibold hover:scale-105" href="<?php echo esc_url($settings['cta_btn_link']['url']); ?>" <?php echo !empty($settings['cta_btn_link']['is_external']) ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
+                <a class="hero-gold-border amac-btn-secondary inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#C5A059] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group font-semibold hover:scale-105" href="<?php echo esc_url($settings['cta_btn_link']['url']); ?>" <?php echo !empty($settings['cta_btn_link']['is_external']) ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
                     <span <?php echo $this->get_render_attribute_string('cta_btn_text'); ?>><?php echo esc_html($settings['cta_btn_text']); ?></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </a>

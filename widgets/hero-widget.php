@@ -240,7 +240,7 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Highlight Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#93846f',
+                'default' => '#C5A059',
                 'selectors' => [
                     '{{WRAPPER}} .hero-gold-text' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .hero-gold-border' => 'border-color: {{VALUE}};',
@@ -255,7 +255,7 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Primary Button BG', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#1f2c2c',
+                'default' => '#5D0D15',
                 'selectors' => [
                     '{{WRAPPER}} .hero-btn-primary' => 'background-color: {{VALUE}};',
                 ],
@@ -315,41 +315,30 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             .hero-overlay-tint {
                 position: absolute !important;
                 inset: 0 !important;
-                background-color: rgba(31, 44, 44, 0.2) !important;
+                background-color: rgba(93, 13, 21, 0.2) !important;
             }
             .hero-btn-primary {
-                background: linear-gradient(135deg, #93846f 0%, #b3a490 100%) !important;
-                color: #1f2c2c !important;
-                font-weight: 700 !important;
-                border: 1px solid #93846f !important;
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, box-shadow 0.3s ease !important;
+                background-color: #5D0D15 !important;
+                color: #FDFCF8 !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
                 transform-origin: center;
                 text-decoration: none !important;
-                box-shadow: 0 10px 25px -5px rgba(147, 132, 111, 0.4) !important;
             }
             .hero-btn-primary:hover {
-                background: linear-gradient(135deg, #a69782 0%, #c4b5a2 100%) !important;
-                color: #111a1a !important;
-                transform: scale(1.05) translateY(-2px) !important;
-                box-shadow: 0 15px 30px -5px rgba(147, 132, 111, 0.55) !important;
-            }
-            .hero-btn-primary svg {
-                stroke: #1f2c2c !important;
-                color: #1f2c2c !important;
+                background-color: #7A1520 !important;
+                color: #FFFFFF !important;
+                transform: scale(1.05) !important;
+                box-shadow: 0 10px 25px -5px rgba(93, 13, 21, 0.4) !important;
             }
             .hero-gold-border {
-                border: 1px solid rgba(147, 132, 111, 0.6) !important;
-                color: #FDFCF8 !important;
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, color 0.3s ease !important;
                 transform-origin: center;
                 text-decoration: none !important;
             }
             .hero-gold-border:hover {
-                background-color: #93846f !important;
-                border-color: #93846f !important;
-                color: #1f2c2c !important;
-                transform: scale(1.05) translateY(-2px) !important;
-                box-shadow: 0 10px 25px -5px rgba(147, 132, 111, 0.35) !important;
+                border-color: #C5A059 !important;
+                color: #FFFFFF !important;
+                transform: scale(1.05) !important;
             }
             .hero-reviews-link {
                 text-decoration: none !important;
@@ -404,17 +393,17 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
                 <div class="max-w-3xl">
                     <?php if (!empty($settings['eyebrow'])): ?>
                     <div class="flex items-center gap-4 mb-6 md:mb-8">
-                        <div class="hero-gold-line h-[1px] w-10 md:w-12 bg-[#93846f]"></div>
-                        <span class="hero-gold-text text-[#93846f] text-[11px] md:text-xs tracking-[0.35em] md:tracking-[0.4em] uppercase" <?php echo $this->get_render_attribute_string('eyebrow'); ?>>
+                        <div class="hero-gold-line h-[1px] w-10 md:w-12 bg-[#C5A059]"></div>
+                        <span class="hero-gold-text text-[#C5A059] text-[11px] md:text-xs tracking-[0.35em] md:tracking-[0.4em] uppercase" <?php echo $this->get_render_attribute_string('eyebrow'); ?>>
                             <?php echo esc_html($settings['eyebrow']); ?>
                         </span>
-                        <div class="hero-gold-line h-[1px] w-10 md:w-12 bg-[#93846f]"></div>
+                        <div class="hero-gold-line h-[1px] w-10 md:w-12 bg-[#C5A059]"></div>
                     </div>
                     <?php endif; ?>
 
                     <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#FDFCF8] font-semibold leading-[1.1] mb-6 md:mb-8">
                         <span <?php echo $this->get_render_attribute_string('title_line1'); ?>><?php echo esc_html($settings['title_line1']); ?></span><br>
-                        <span class="hero-gold-text text-[#93846f]" <?php echo $this->get_render_attribute_string('title_highlight'); ?>><?php echo esc_html($settings['title_highlight']); ?></span><br>
+                        <span class="hero-gold-text text-[#C5A059]" <?php echo $this->get_render_attribute_string('title_highlight'); ?>><?php echo esc_html($settings['title_highlight']); ?></span><br>
                         <span <?php echo $this->get_render_attribute_string('title_line3'); ?>><?php echo esc_html($settings['title_line3']); ?></span>
                     </h1>
 
@@ -426,14 +415,14 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
 
                     <div class="hero-btn-group flex flex-col sm:flex-row gap-4">
                         <?php if (!empty($settings['btn1_text'])): ?>
-                        <a class="hero-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#1f2c2c] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn1_link']['url']); ?>" <?php echo $settings['btn1_link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="hero-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn1_link']['url']); ?>" <?php echo $settings['btn1_link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <span <?php echo $this->get_render_attribute_string('btn1_text'); ?>><?php echo esc_html($settings['btn1_text']); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                         <?php endif; ?>
 
                         <?php if (!empty($settings['btn2_text'])): ?>
-                        <a class="hero-gold-border inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#93846f]/40 text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300" href="<?php echo esc_url($settings['btn2_link']['url']); ?>" <?php echo $settings['btn2_link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="hero-gold-border inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#C5A059]/40 text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300" href="<?php echo esc_url($settings['btn2_link']['url']); ?>" <?php echo $settings['btn2_link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <span <?php echo $this->get_render_attribute_string('btn2_text'); ?>><?php echo esc_html($settings['btn2_text']); ?></span>
                         </a>
                         <?php endif; ?>
@@ -442,27 +431,27 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
                     <?php if (!empty($settings['show_reviews']) && $settings['show_reviews'] === 'yes' && !empty($settings['reviews_text'])): ?>
                     <div class="mt-8 flex items-center">
                         <a href="<?php echo esc_url(!empty($settings['reviews_link']['url']) ? $settings['reviews_link']['url'] : '#testimonials'); ?>" class="hero-reviews-link inline-flex items-center gap-3 group" style="text-decoration: none !important;">
-                            <div class="flex items-center gap-0.5 text-[#93846f] text-sm leading-none">
+                            <div class="flex items-center gap-0.5 text-[#C5A059] text-sm leading-none">
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
-                            <span class="text-[#FDFCF8] group-hover:text-[#93846f] text-xs tracking-[0.2em] uppercase font-semibold transition-colors duration-300" <?php echo $this->get_render_attribute_string('reviews_text'); ?>>
+                            <span class="text-[#FDFCF8] group-hover:text-[#C5A059] text-xs tracking-[0.2em] uppercase font-semibold transition-colors duration-300" <?php echo $this->get_render_attribute_string('reviews_text'); ?>>
                                 <?php echo esc_html($settings['reviews_text']); ?>
                             </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#93846f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform duration-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform duration-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                     </div>
                     <?php endif; ?>
                 </div>
 
                 <?php if ($settings['show_badge'] === 'yes' && !empty($settings['badge_circle_text'])): ?>
-                <div class="hidden md:flex absolute bottom-28 right-8 lg:right-16 w-28 h-28 rounded-full hero-gold-border border-2 border-[#93846f]/60 items-center justify-center">
+                <div class="hidden md:flex absolute bottom-28 right-8 lg:right-16 w-28 h-28 rounded-full hero-gold-border border-2 border-[#C5A059]/60 items-center justify-center">
                     <div class="absolute inset-0 rounded-full animate-spin" style="animation-duration: 20s;">
                         <svg viewBox="0 0 100 100" class="w-full h-full">
                             <defs><path id="hero-badge-circle-<?php echo esc_attr($this->get_id()); ?>" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs>
-                            <text class="hero-gold-fill fill-[#93846f] text-[10px] tracking-[0.3em] uppercase"><textPath href="#hero-badge-circle-<?php echo esc_attr($this->get_id()); ?>"><?php echo esc_html($settings['badge_circle_text']); ?></textPath></text>
+                            <text class="hero-gold-fill fill-[#C5A059] text-[10px] tracking-[0.3em] uppercase"><textPath href="#hero-badge-circle-<?php echo esc_attr($this->get_id()); ?>"><?php echo esc_html($settings['badge_circle_text']); ?></textPath></text>
                         </svg>
                     </div>
-                    <span class="hero-gold-text font-display text-[#93846f] text-xs tracking-wider text-center leading-tight">
+                    <span class="hero-gold-text font-display text-[#C5A059] text-xs tracking-wider text-center leading-tight">
                         <?php echo nl2br(esc_html($settings['badge_center_text'])); ?>
                     </span>
                 </div>

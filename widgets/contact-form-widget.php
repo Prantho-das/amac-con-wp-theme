@@ -202,7 +202,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 background: transparent !important;
                 background-color: transparent !important;
                 border: none !important;
-                border-bottom: 2px solid rgba(147, 132, 111, 0.3) !important;
+                border-bottom: 2px solid rgba(197, 160, 89, 0.3) !important;
                 border-radius: 0px !important;
                 box-shadow: none !important;
                 outline: none !important;
@@ -229,7 +229,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .amac-input:focus,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form input:focus,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form textarea:focus {
-                border-bottom-color: #1f2c2c !important;
+                border-bottom-color: #5D0D15 !important;
                 outline: none !important;
                 box-shadow: none !important;
             }
@@ -240,7 +240,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form label,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpforms-field-label {
                 display: block !important;
-                color: #93846f !important;
+                color: #C5A059 !important;
                 font-size: 11px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
@@ -255,30 +255,25 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 align-items: center !important;
                 justify-content: center !important;
                 gap: 12px !important;
-                background-color: #1f2c2c !important;
+                background-color: #5D0D15 !important;
                 color: #FDFCF8 !important;
-                border: 1px solid #93846f !important;
+                border: none !important;
                 border-radius: 0px !important;
                 padding: 16px 36px !important;
                 font-size: 13px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
                 cursor: pointer !important;
-                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                transition: all 0.3s ease !important;
                 font-weight: 600 !important;
                 font-family: "Inter", sans-serif !important;
                 box-sizing: border-box !important;
                 max-width: 100% !important;
-                box-shadow: 0 4px 15px rgba(31, 44, 44, 0.2) !important;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form input[type="submit"]:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpforms-submit:hover {
-                background-color: #93846f !important;
-                color: #1f2c2c !important;
-                border-color: #93846f !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 6px 20px rgba(147, 132, 111, 0.35) !important;
+                background-color: #7A1520 !important;
             }
             @media (max-width: 640px) {
                 #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn,
@@ -295,21 +290,21 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .info-icon-box {
                 width: 48px;
                 height: 48px;
-                background-color: rgba(31, 44, 44, 0.05);
+                background-color: rgba(93, 13, 21, 0.05);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> .info-icon-box svg {
-                color: #1f2c2c;
+                color: #5D0D15;
                 width: 20px;
                 height: 20px;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> .danny-box {
                 margin-top: 48px;
                 padding: 24px;
-                background-color: #1f2c2c;
+                background-color: #5D0D15;
                 color: #FDFCF8;
             }
             /* Browser autofill fix */
@@ -326,7 +321,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                     <!-- Left Column (Direct Access) -->
                     <div class="lg:col-span-2">
-                        <h3 class="font-display text-2xl text-[#1f2c2c] font-semibold mb-8" <?php echo $this->get_render_attribute_string('col_title'); ?>>
+                        <h3 class="font-display text-2xl text-[#5D0D15] font-semibold mb-8" <?php echo $this->get_render_attribute_string('col_title'); ?>>
                             <?php echo esc_html($settings['col_title']); ?>
                         </h3>
 
@@ -337,8 +332,8 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                 </div>
                                 <div>
-                                    <p class="text-xs tracking-[0.2em] uppercase text-[#93846f] mb-1 font-medium">Phone</p>
-                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#1f2c2c] transition-colors" <?php echo $this->get_render_attribute_string('phone'); ?>>
+                                    <p class="text-xs tracking-[0.2em] uppercase text-[#C5A059] mb-1 font-medium">Phone</p>
+                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#5D0D15] transition-colors" <?php echo $this->get_render_attribute_string('phone'); ?>>
                                         <?php echo esc_html($settings['phone']); ?>
                                     </p>
                                 </div>
@@ -350,8 +345,8 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                                 </div>
                                 <div>
-                                    <p class="text-xs tracking-[0.2em] uppercase text-[#93846f] mb-1 font-medium">Email</p>
-                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#1f2c2c] transition-colors" <?php echo $this->get_render_attribute_string('email'); ?>>
+                                    <p class="text-xs tracking-[0.2em] uppercase text-[#C5A059] mb-1 font-medium">Email</p>
+                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#5D0D15] transition-colors" <?php echo $this->get_render_attribute_string('email'); ?>>
                                         <?php echo esc_html($settings['email']); ?>
                                     </p>
                                 </div>
@@ -363,7 +358,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 </div>
                                 <div>
-                                    <p class="text-xs tracking-[0.2em] uppercase text-[#93846f] mb-1 font-medium">Service Area</p>
+                                    <p class="text-xs tracking-[0.2em] uppercase text-[#C5A059] mb-1 font-medium">Service Area</p>
                                     <p class="text-[#1A1A1A] text-lg" <?php echo $this->get_render_attribute_string('service_area_title'); ?>><?php echo esc_html($settings['service_area_title']); ?></p>
                                     <p class="text-[#1A1A1A]/50 text-sm mt-1 leading-relaxed" <?php echo $this->get_render_attribute_string('service_area_sub'); ?>><?php echo esc_html($settings['service_area_sub']); ?></p>
                                 </div>
@@ -373,7 +368,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                         <!-- Danny Quote Box -->
                         <div class="danny-box">
                             <p class="font-display text-lg font-semibold mb-2 text-[#FDFCF8]" <?php echo $this->get_render_attribute_string('danny_name'); ?>><?php echo esc_html($settings['danny_name']); ?></p>
-                            <p class="text-[#93846f] text-xs tracking-[0.2em] uppercase mb-4" <?php echo $this->get_render_attribute_string('danny_title'); ?>><?php echo esc_html($settings['danny_title']); ?></p>
+                            <p class="text-[#C5A059] text-xs tracking-[0.2em] uppercase mb-4" <?php echo $this->get_render_attribute_string('danny_title'); ?>><?php echo esc_html($settings['danny_title']); ?></p>
                             <p class="text-[#FDFCF8]/70 text-sm leading-relaxed" <?php echo $this->get_render_attribute_string('danny_quote'); ?>>
                                 <?php echo esc_html($settings['danny_quote']); ?>
                             </p>
@@ -387,8 +382,8 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                 <?php echo do_shortcode($settings['form_shortcode']); ?>
                             </div>
                         <?php else: ?>
-                            <div id="contact-success-msg-<?php echo esc_attr($widget_id); ?>" style="display: none; margin-bottom: 24px; padding: 20px; background-color: #1f2c2c; border: 1px solid #93846f; color: #FDFCF8;">
-                                <p style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.125rem; color: #93846f; margin: 0 0 4px 0;">✓ Quote Request Received</p>
+                            <div id="contact-success-msg-<?php echo esc_attr($widget_id); ?>" style="display: none; margin-bottom: 24px; padding: 20px; background-color: #5D0D15; border: 1px solid #C5A059; color: #FDFCF8;">
+                                <p style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.125rem; color: #C5A059; margin: 0 0 4px 0;">✓ Quote Request Received</p>
                                 <p style="font-size: 0.875rem; color: rgba(253, 252, 248, 0.9); margin: 0;">Thank you! Danny O'Connor personally reviews every inquiry and will respond within 24 hours.</p>
                             </div>
 
