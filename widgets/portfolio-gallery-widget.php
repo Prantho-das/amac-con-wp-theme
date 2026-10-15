@@ -185,14 +185,14 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 white-space: nowrap !important;
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .filter-btn:hover {
-                border-color: #C5A059 !important;
-                color: #5D0D15 !important;
+                border-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-gold, #C5A059) !important;
                 background: transparent !important;
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .filter-btn.is-active {
-                background-color: #5D0D15 !important;
-                color: #FDFCF8 !important;
-                border-color: #5D0D15 !important;
+                background-color: var(--amac-btn-text, #0B1325) !important;
+                color: var(--amac-gold, #C5A059) !important;
+                border-color: var(--amac-gold, #C5A059) !important;
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .portfolio-card {
                 background-color: #F5F1EB;
@@ -202,9 +202,9 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 position: relative;
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .portfolio-card:hover {
-                border-color: #C5A059;
+                border-color: var(--amac-gold, #C5A059);
                 transform: translateY(-4px);
-                box-shadow: 0 16px 32px -8px rgba(93, 13, 21, 0.12);
+                box-shadow: 0 16px 32px -8px rgba(197, 160, 89, 0.2);
             }
             #portfolio-section-<?php echo esc_attr($widget_id); ?> .photo-count-badge {
                 display: none !important;
@@ -300,9 +300,9 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                background: rgba(93, 13, 21, 0.8);
-                color: #FDFCF8;
-                border: 1px solid rgba(197, 160, 89, 0.4);
+                background: var(--amac-dark, #0B1325) !important;
+                color: var(--amac-gold, #C5A059) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
                 width: 44px;
                 height: 44px;
                 display: flex;
@@ -313,8 +313,9 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 z-index: 10;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-nav-btn:hover {
-                background: #7A1520;
-                border-color: #C5A059;
+                background: var(--amac-gold, #C5A059) !important;
+                border-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-btn-text, #0B1325) !important;
                 transform: translateY(-50%) scale(1.1);
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-nav-prev { left: 16px; }
@@ -347,7 +348,7 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .thumb-img.is-active,
             #amac-modal-<?php echo esc_attr($widget_id); ?> .thumb-img:hover {
-                border-color: #C5A059;
+                border-color: var(--amac-gold, #C5A059);
                 opacity: 1;
                 transform: scale(1.05);
             }
@@ -362,9 +363,9 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 box-sizing: border-box;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn {
-                background-color: #5D0D15 !important;
-                color: #FFFFFF !important;
-                border: 1px solid #C5A059 !important;
+                background-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-btn-text, #0B1325) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
                 padding: 14px 20px !important;
                 font-size: 12px !important;
                 letter-spacing: 0.2em !important;
@@ -381,21 +382,26 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn:hover {
-                background-color: #7A1520 !important;
+                background-color: var(--amac-gold-hover, #B38728) !important;
+                border-color: var(--amac-gold-hover, #B38728) !important;
                 color: #FFFFFF !important;
-                border-color: #B38E46 !important;
                 transform: scale(1.04) !important;
-                box-shadow: 0 8px 24px rgba(93, 13, 21, 0.5) !important;
+                box-shadow: 0 8px 24px rgba(197, 160, 89, 0.4) !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn span,
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn svg {
+                color: var(--amac-btn-text, #0B1325) !important;
+                stroke: var(--amac-btn-text, #0B1325) !important;
+            }
+            #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn:hover span,
+            #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-action-btn:hover svg {
                 color: #FFFFFF !important;
                 stroke: #FFFFFF !important;
             }
             #amac-modal-<?php echo esc_attr($widget_id); ?> .modal-close-btn {
                 background: transparent;
                 border: none;
-                color: #C5A059;
+                color: var(--amac-gold, #C5A059);
                 font-size: 24px;
                 cursor: pointer;
                 padding: 4px 8px;
@@ -555,12 +561,12 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                                          data-slide-index="<?php echo esc_attr($p_i); ?>">
                                 <?php endforeach; ?>
                             <?php else: ?>
-                                <div class="w-full h-full bg-[#5D0D15]/5 flex items-center justify-center text-[#C5A059]/40">
+                                <div class="w-full h-full bg-[#0B1325]/5 flex items-center justify-center text-[#C5A059]/40">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
                                 </div>
                             <?php endif; ?>
 
-                            <span class="absolute top-4 left-4 px-3 py-1 bg-[#5D0D15] text-[#FDFCF8] text-[10px] tracking-[0.2em] uppercase font-semibold z-20">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-[#0B1325] text-[#C5A059] border border-[#C5A059]/40 text-[10px] tracking-[0.2em] uppercase font-semibold z-20">
                                 <?php echo esc_html($cat_label); ?>
                             </span>
 
@@ -574,10 +580,10 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                         </div>
                         <div class="p-6 flex items-center justify-between">
                             <div>
-                                <h3 class="font-display text-xl text-[#5D0D15] font-semibold mb-2" <?php echo $this->get_render_attribute_string($title_key); ?>><?php echo esc_html($item['title']); ?></h3>
+                                <h3 class="font-display text-xl text-[#0B1325] font-semibold mb-2" <?php echo $this->get_render_attribute_string($title_key); ?>><?php echo esc_html($item['title']); ?></h3>
                                 <p class="text-[#C5A059] text-xs tracking-wider uppercase"><?php echo esc_html($item['location']); ?></p>
                             </div>
-                            <span class="text-[#5D0D15] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 duration-300">
+                            <span class="text-[#C5A059] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </span>
                         </div>
@@ -600,7 +606,7 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
             <div class="modal-content-75">
                 <div class="modal-header">
                     <div class="flex items-center gap-3">
-                        <span id="amac-modal-cat-<?php echo esc_attr($widget_id); ?>" class="px-3 py-1 bg-[#5D0D15] text-[#FDFCF8] text-[10px] tracking-[0.2em] uppercase font-semibold"></span>
+                        <span id="amac-modal-cat-<?php echo esc_attr($widget_id); ?>" class="px-3 py-1 bg-[#0B1325] text-[#C5A059] border border-[#C5A059]/40 text-[10px] tracking-[0.2em] uppercase font-semibold"></span>
                         <h3 id="amac-modal-title-<?php echo esc_attr($widget_id); ?>" class="font-display text-xl text-[#FDFCF8] font-semibold m-0"></h3>
                     </div>
                     <button class="modal-close-btn" aria-label="Close modal">&times;</button>
@@ -609,11 +615,11 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                 <div class="modal-body">
                     <!-- Left: Large Gallery View with Next/Prev and Thumbnails -->
                     <div class="gallery-main-view">
-                        <button class="modal-nav-btn modal-nav-prev" aria-label="Previous photo">
+                        <button class="modal-nav-btn modal-nav-prev" aria-label="Previous photo" style="background-color: var(--amac-dark, #0B1325) !important; color: var(--amac-gold, #C5A059) !important; border: 1px solid var(--amac-gold, #C5A059) !important;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                         </button>
                         <img id="amac-modal-main-img-<?php echo esc_attr($widget_id); ?>" src="" alt="Project detail" class="main-modal-img">
-                        <button class="modal-nav-btn modal-nav-next" aria-label="Next photo">
+                        <button class="modal-nav-btn modal-nav-next" aria-label="Next photo" style="background-color: var(--amac-dark, #0B1325) !important; color: var(--amac-gold, #C5A059) !important; border: 1px solid var(--amac-gold, #C5A059) !important;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                         </button>
 
@@ -631,9 +637,9 @@ class AMAC_Portfolio_Gallery_Widget extends \Elementor\Widget_Base {
                         </div>
 
                         <div class="pt-6 border-t border-[#C5A059]/20">
-                            <a id="amac-modal-btn-<?php echo esc_attr($widget_id); ?>" href="#contact" class="modal-action-btn">
-                                <span id="amac-modal-btn-text-<?php echo esc_attr($widget_id); ?>">Request Similar Project</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            <a id="amac-modal-btn-<?php echo esc_attr($widget_id); ?>" href="#contact" class="modal-action-btn" style="background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; border: 1px solid var(--amac-gold, #C5A059) !important; text-decoration: none !important;">
+                                <span id="amac-modal-btn-text-<?php echo esc_attr($widget_id); ?>" style="color: var(--amac-btn-text, #0B1325) !important;">Request Similar Project</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amac-btn-text, #0B1325)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                             </a>
                         </div>
                     </div>

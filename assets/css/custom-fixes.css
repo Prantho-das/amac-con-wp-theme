@@ -89,28 +89,322 @@ html, body {
     pointer-events: none;
 }
 
-/* AMAC Explicit Theme Utility Overrides */
-.bg-\[\#5D0D15\],
+/* ===================================================
+   CENTRALIZED GLOBAL THEME VARIABLES
+   Change once in WP Admin or here -> updates entire site!
+   =================================================== */
+
+:root {
+    --amac-dark: #0B1325;
+    --amac-gold: #C5A059;
+    --amac-gold-hover: #B38728;
+    --amac-btn-text: #0B1325;
+    --amac-light-bg: #FDFCF8;
+    --amac-cream-bg: #F5F1EB;
+
+    --primary: 222 54% 9% !important;
+    --primary-foreground: 40 33% 98% !important;
+    --accent: 43 45% 56% !important;
+    --accent-foreground: 222 54% 9% !important;
+    --ring: 43 45% 56% !important;
+    --sidebar-background: 222 54% 9% !important;
+}
+
+/* Primary Dark Base Backgrounds */
+section.bg-\[\#0B1325\],
 section.bg-\[\#5D0D15\],
-div.bg-\[\#5D0D15\] {
-    background-color: #5D0D15 !important;
+div.bg-\[\#0B1325\],
+div.bg-\[\#5D0D15\],
+header.bg-\[\#0B1325\],
+footer.bg-\[\#0B1325\],
+.stats-wrapper,
+.testimonials-wrapper,
+section.page-banner-section,
+.bg-midnight-navy,
+#mobile-menu-drawer {
+    background-color: var(--amac-dark, #0B1325) !important;
 }
 
-.text-\[\#5D0D15\] {
-    color: #5D0D15 !important;
+/* Fallback for general dark utility classes, excluding buttons */
+:not(a):not(button).bg-\[\#0B1325\],
+:not(a):not(button).bg-\[\#5D0D15\] {
+    background-color: var(--amac-dark, #0B1325) !important;
 }
 
-.text-\[\#C5A059\] {
-    color: #C5A059 !important;
+/* Any buttons that historically had maroon classes become Royal Gold */
+a.bg-\[\#5D0D15\],
+button.bg-\[\#5D0D15\],
+a.bg-\[\#7A1520\],
+button.bg-\[\#7A1520\] {
+    background-color: var(--amac-gold, #C5A059) !important;
+    background: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-btn-text, #0B1325) !important;
+    border: 1px solid var(--amac-gold, #C5A059) !important;
 }
 
-.border-\[\#C5A059\] {
-    border-color: #C5A059 !important;
+.bg-\[\#0B1325\]\/90, .bg-\[\#5D0D15\]\/90 {
+    background-color: var(--amac-dark, #0B1325) !important;
+    opacity: 0.9 !important;
 }
 
-/* Portfolio Card Category Badges */
+.bg-\[\#0B1325\]\/80, .bg-\[\#5D0D15\]\/80 {
+    background-color: var(--amac-dark, #0B1325) !important;
+    opacity: 0.8 !important;
+}
+
+.bg-\[\#0B1325\]\/20, .bg-\[\#5D0D15\]\/20 {
+    background-color: var(--amac-dark, #0B1325) !important;
+    opacity: 0.2 !important;
+}
+
+.bg-\[\#0B1325\]\/10, .bg-\[\#5D0D15\]\/10,
+.bg-\[\#0B1325\]\/5, .bg-\[\#5D0D15\]\/5 {
+    background-color: var(--amac-dark, #0B1325) !important;
+    opacity: 0.05 !important;
+}
+
+/* Primary Dark Headings & Text */
+.text-\[\#0B1325\],
+.text-\[\#5D0D15\],
+.services-heading,
+.service-card-title,
+.craft-title,
+.about-story-title,
+.about-values-title {
+    color: var(--amac-dark, #0B1325) !important;
+}
+
+/* Gold Accents & Highlights */
+.bg-\[\#C5A059\],
+.craft-gold-bg,
+.hero-gold-line {
+    background-color: var(--amac-gold, #C5A059) !important;
+}
+
+.text-\[\#C5A059\],
+.hero-gold-text,
+.craft-gold {
+    color: var(--amac-gold, #C5A059) !important;
+}
+
+.border-\[\#C5A059\],
+.hero-gold-border,
+.craft-gold-border {
+    border-color: var(--amac-gold, #C5A059) !important;
+}
+
+.fill-\[\#C5A059\],
+.hero-gold-fill {
+    fill: var(--amac-gold, #C5A059) !important;
+}
+
+/* Action Buttons: 100% Variable Driven with Ultra-High Specificity */
+html body .hero-btn-primary,
+html body a.hero-btn-primary,
+html body .amac-btn-primary,
+html body a.amac-btn-primary,
+html body .header-quote-btn,
+html body a.header-quote-btn,
+html body header .header-quote-btn,
+html body #amac-site-header .header-quote-btn,
+html body .modal-action-btn,
+html body a.modal-action-btn,
+html body [id^="amac-modal-btn"],
+html body button.submit-btn,
+html body .wpcf7-submit,
+html body .wpforms-submit,
+#modal-btn {
+    background-color: var(--amac-gold, #C5A059) !important;
+    background: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-btn-text, #0B1325) !important;
+    border: 1px solid var(--amac-gold, #C5A059) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+}
+
+html body .hero-btn-primary span,
+html body a.hero-btn-primary span,
+html body .amac-btn-primary span,
+html body a.amac-btn-primary span,
+html body .header-quote-btn span,
+html body a.header-quote-btn span,
+html body .modal-action-btn span,
+html body a.modal-action-btn span,
+html body button.submit-btn span {
+    color: var(--amac-btn-text, #0B1325) !important;
+}
+
+html body .hero-btn-primary svg,
+html body a.hero-btn-primary svg,
+html body .amac-btn-primary svg,
+html body a.amac-btn-primary svg,
+html body .header-quote-btn svg,
+html body a.header-quote-btn svg,
+html body .modal-action-btn svg,
+html body a.modal-action-btn svg,
+html body button.submit-btn svg {
+    color: var(--amac-btn-text, #0B1325) !important;
+    stroke: var(--amac-btn-text, #0B1325) !important;
+}
+
+html body .hero-btn-primary:hover,
+html body a.hero-btn-primary:hover,
+html body .amac-btn-primary:hover,
+html body a.amac-btn-primary:hover,
+html body .header-quote-btn:hover,
+html body a.header-quote-btn:hover,
+html body header .header-quote-btn:hover,
+html body #amac-site-header .header-quote-btn:hover,
+html body .modal-action-btn:hover,
+html body a.modal-action-btn:hover,
+html body [id^="amac-modal-btn"]:hover,
+html body button.submit-btn:hover,
+html body .wpcf7-submit:hover,
+html body .wpforms-submit:hover,
+#modal-btn:hover,
+.hover\:bg-\[\#B38728\]:hover,
+.hover\:bg-\[\#7A1520\]:hover,
+.hover\:bg-\[\#5D0D15\]:hover {
+    background-color: var(--amac-gold-hover, #B38728) !important;
+    background: var(--amac-gold-hover, #B38728) !important;
+    color: #FFFFFF !important;
+    border-color: var(--amac-gold-hover, #B38728) !important;
+}
+
+html body .hero-btn-primary:hover span,
+html body a.hero-btn-primary:hover span,
+html body .amac-btn-primary:hover span,
+html body a.amac-btn-primary:hover span,
+html body .header-quote-btn:hover span,
+html body a.header-quote-btn:hover span,
+html body .modal-action-btn:hover span,
+html body a.modal-action-btn:hover span,
+html body button.submit-btn:hover span {
+    color: #FFFFFF !important;
+}
+
+html body .hero-btn-primary:hover svg,
+html body a.hero-btn-primary:hover svg,
+html body .amac-btn-primary:hover svg,
+html body a.amac-btn-primary:hover svg,
+html body .header-quote-btn:hover svg,
+html body a.header-quote-btn:hover svg,
+html body .modal-action-btn:hover svg,
+html body a.modal-action-btn:hover svg,
+html body button.submit-btn:hover svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/* Secondary Button / Swiper Navigation */
+.amac-swiper-prev,
+.amac-swiper-next {
+    background-color: var(--amac-dark, #0B1325) !important;
+    border-color: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-gold, #C5A059) !important;
+}
+
+.amac-swiper-prev:hover,
+.amac-swiper-next:hover {
+    background-color: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-btn-text, #0B1325) !important;
+    border-color: var(--amac-gold, #C5A059) !important;
+}
+
+.amac-swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--amac-gold, #C5A059) !important;
+}
+
+/* Modal Prev / Next Navigation (< and >) */
+html body .modal-nav-btn,
+html body [id^="amac-modal-"] .modal-nav-btn {
+    background: var(--amac-dark, #0B1325) !important;
+    background-color: var(--amac-dark, #0B1325) !important;
+    color: var(--amac-gold, #C5A059) !important;
+    border: 1px solid var(--amac-gold, #C5A059) !important;
+}
+
+html body .modal-nav-btn:hover,
+html body [id^="amac-modal-"] .modal-nav-btn:hover {
+    background: var(--amac-gold, #C5A059) !important;
+    background-color: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-btn-text, #0B1325) !important;
+}
+
+/* Portfolio Card Category Badges & Modal */
 .portfolio-card span.absolute,
-.portfolio-card .card-slider-wrap > span {
-    background-color: #5D0D15 !important;
-    color: #FDFCF8 !important;
+.portfolio-card .card-slider-wrap > span,
+#modal-cat,
+#amac-modal-cat {
+    background-color: var(--amac-dark, #0B1325) !important;
+    color: var(--amac-gold, #C5A059) !important;
+    border: 1px solid var(--amac-gold, #C5A059) !important;
 }
+
+/* Filter Buttons */
+html body .filter-btn,
+html body [data-filter] {
+    background: transparent !important;
+    border: 1px solid rgba(197, 160, 89, 0.3) !important;
+    color: rgba(26, 26, 26, 0.6) !important;
+}
+
+html body .filter-btn:hover,
+html body [data-filter]:hover {
+    border-color: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-gold, #C5A059) !important;
+    background: transparent !important;
+}
+
+html body .filter-btn.is-active,
+html body [data-filter].is-active,
+html body .portfolio-filters .filter-btn.is-active {
+    background-color: var(--amac-dark, #0B1325) !important;
+    background: var(--amac-dark, #0B1325) !important;
+    color: var(--amac-gold, #C5A059) !important;
+    border-color: var(--amac-gold, #C5A059) !important;
+}
+
+/* Values Icons Fix */
+html body .amac-values-icon-box,
+html body .amac-values-wrapper .w-14.h-14 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--amac-dark, #0B1325) !important;
+    border: 1px solid rgba(197, 160, 89, 0.45) !important;
+    border-radius: 4px !important;
+}
+
+html body .amac-values-icon-box svg,
+html body .amac-values-wrapper svg {
+    display: block !important;
+    width: 26px !important;
+    height: 26px !important;
+    stroke: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-gold, #C5A059) !important;
+    fill: none !important;
+    stroke-width: 2.2px !important;
+}
+
+/* Home Service Cards Icon Fix */
+html body .services-section .w-12.h-12 {
+    background-color: var(--amac-dark, #0B1325) !important;
+    border: 1px solid rgba(197, 160, 89, 0.45) !important;
+}
+
+html body .services-section .w-12.h-12 svg {
+    stroke: var(--amac-gold, #C5A059) !important;
+    color: var(--amac-gold, #C5A059) !important;
+}
+
+/* Form Focus States */
+.focus\:border-\[\#0B1325\]:focus,
+.focus\:border-\[\#5D0D15\]:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--amac-gold, #C5A059) !important;
+}
+

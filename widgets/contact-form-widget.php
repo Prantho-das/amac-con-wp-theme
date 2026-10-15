@@ -229,7 +229,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .amac-input:focus,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form input:focus,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form textarea:focus {
-                border-bottom-color: #5D0D15 !important;
+                border-bottom-color: var(--amac-gold, #C5A059) !important;
                 outline: none !important;
                 box-shadow: none !important;
             }
@@ -240,7 +240,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form label,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpforms-field-label {
                 display: block !important;
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
                 font-size: 11px !important;
                 letter-spacing: 0.2em !important;
                 text-transform: uppercase !important;
@@ -255,9 +255,9 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 align-items: center !important;
                 justify-content: center !important;
                 gap: 12px !important;
-                background-color: #5D0D15 !important;
-                color: #FDFCF8 !important;
-                border: none !important;
+                background-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-btn-text, #0B1325) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
                 border-radius: 0px !important;
                 padding: 16px 36px !important;
                 font-size: 13px !important;
@@ -273,7 +273,9 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpcf7-form input[type="submit"]:hover,
             #contact-section-<?php echo esc_attr($widget_id); ?> .wpforms-submit:hover {
-                background-color: #7A1520 !important;
+                background-color: var(--amac-gold-hover, #B38728) !important;
+                border-color: var(--amac-gold-hover, #B38728) !important;
+                color: #FFFFFF !important;
             }
             @media (max-width: 640px) {
                 #contact-section-<?php echo esc_attr($widget_id); ?> button.submit-btn,
@@ -290,21 +292,22 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
             #contact-section-<?php echo esc_attr($widget_id); ?> .info-icon-box {
                 width: 48px;
                 height: 48px;
-                background-color: rgba(93, 13, 21, 0.05);
+                background-color: rgba(11, 19, 37, 0.05);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> .info-icon-box svg {
-                color: #5D0D15;
+                color: var(--amac-gold, #C5A059);
                 width: 20px;
                 height: 20px;
             }
             #contact-section-<?php echo esc_attr($widget_id); ?> .danny-box {
                 margin-top: 48px;
                 padding: 24px;
-                background-color: #5D0D15;
+                background-color: var(--amac-dark, #0B1325);
+                border: 1px solid rgba(197, 160, 89, 0.35);
                 color: #FDFCF8;
             }
             /* Browser autofill fix */
@@ -321,7 +324,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                 <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                     <!-- Left Column (Direct Access) -->
                     <div class="lg:col-span-2">
-                        <h3 class="font-display text-2xl text-[#5D0D15] font-semibold mb-8" <?php echo $this->get_render_attribute_string('col_title'); ?>>
+                        <h3 class="font-display text-2xl text-[#0B1325] font-semibold mb-8" <?php echo $this->get_render_attribute_string('col_title'); ?>>
                             <?php echo esc_html($settings['col_title']); ?>
                         </h3>
 
@@ -333,7 +336,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                 </div>
                                 <div>
                                     <p class="text-xs tracking-[0.2em] uppercase text-[#C5A059] mb-1 font-medium">Phone</p>
-                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#5D0D15] transition-colors" <?php echo $this->get_render_attribute_string('phone'); ?>>
+                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#C5A059] transition-colors" <?php echo $this->get_render_attribute_string('phone'); ?>>
                                         <?php echo esc_html($settings['phone']); ?>
                                     </p>
                                 </div>
@@ -346,7 +349,7 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                 </div>
                                 <div>
                                     <p class="text-xs tracking-[0.2em] uppercase text-[#C5A059] mb-1 font-medium">Email</p>
-                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#5D0D15] transition-colors" <?php echo $this->get_render_attribute_string('email'); ?>>
+                                    <p class="text-[#1A1A1A] text-lg group-hover:text-[#C5A059] transition-colors" <?php echo $this->get_render_attribute_string('email'); ?>>
                                         <?php echo esc_html($settings['email']); ?>
                                     </p>
                                 </div>
@@ -382,8 +385,8 @@ class AMAC_Contact_Form_Widget extends \Elementor\Widget_Base {
                                 <?php echo do_shortcode($settings['form_shortcode']); ?>
                             </div>
                         <?php else: ?>
-                            <div id="contact-success-msg-<?php echo esc_attr($widget_id); ?>" style="display: none; margin-bottom: 24px; padding: 20px; background-color: #5D0D15; border: 1px solid #C5A059; color: #FDFCF8;">
-                                <p style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.125rem; color: #C5A059; margin: 0 0 4px 0;">✓ Quote Request Received</p>
+                            <div id="contact-success-msg-<?php echo esc_attr($widget_id); ?>" style="display: none; margin-bottom: 24px; padding: 20px; background-color: var(--amac-dark, #0B1325); border: 1px solid var(--amac-gold, #C5A059); color: #FDFCF8;">
+                                <p style="font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.125rem; color: var(--amac-gold, #C5A059); margin: 0 0 4px 0;">✓ Quote Request Received</p>
                                 <p style="font-size: 0.875rem; color: rgba(253, 252, 248, 0.9); margin: 0;">Thank you! Danny O'Connor personally reviews every inquiry and will respond within 24 hours.</p>
                             </div>
 

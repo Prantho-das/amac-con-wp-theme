@@ -240,7 +240,7 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Highlight Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .hero-gold-text' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .hero-gold-border' => 'border-color: {{VALUE}};',
@@ -255,7 +255,7 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Primary Button BG', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#5D0D15',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .hero-btn-primary' => 'background-color: {{VALUE}};',
                 ],
@@ -279,7 +279,8 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-        $bg_url = !empty($settings['bg_image']['url']) ? $settings['bg_image']['url'] : '';
+        $fallback_hero_bg = defined('AMAC_BUILDERS_PLUGIN_URL') ? AMAC_BUILDERS_PLUGIN_URL . 'assets/images/img_866929028.png' : plugins_url('assets/images/img_866929028.png', dirname(__DIR__) . '/amac-builders-addon.php');
+        $bg_url = !empty($settings['bg_image']['url']) ? $settings['bg_image']['url'] : $fallback_hero_bg;
 
         // Live Inline Editing attributes for Elementor visual canvas
         $this->add_inline_editing_attributes('eyebrow', 'none');
@@ -315,20 +316,23 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
             .hero-overlay-tint {
                 position: absolute !important;
                 inset: 0 !important;
-                background-color: rgba(93, 13, 21, 0.2) !important;
+                background-color: rgba(11, 19, 37, 0.25) !important;
             }
             .hero-btn-primary {
-                background-color: #5D0D15 !important;
-                color: #FDFCF8 !important;
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
+                background-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-btn-text, #0B1325) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
+                font-weight: 600 !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease !important;
                 transform-origin: center;
                 text-decoration: none !important;
             }
             .hero-btn-primary:hover {
-                background-color: #7A1520 !important;
+                background-color: var(--amac-gold-hover, #B38728) !important;
+                border-color: var(--amac-gold-hover, #B38728) !important;
                 color: #FFFFFF !important;
                 transform: scale(1.05) !important;
-                box-shadow: 0 10px 25px -5px rgba(93, 13, 21, 0.4) !important;
+                box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.45) !important;
             }
             .hero-gold-border {
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, color 0.3s ease !important;
@@ -336,7 +340,7 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
                 text-decoration: none !important;
             }
             .hero-gold-border:hover {
-                border-color: #C5A059 !important;
+                border-color: var(--amac-gold, #C5A059) !important;
                 color: #FFFFFF !important;
                 transform: scale(1.05) !important;
             }
@@ -415,9 +419,9 @@ class AMAC_Hero_Widget extends \Elementor\Widget_Base {
 
                     <div class="hero-btn-group flex flex-col sm:flex-row gap-4">
                         <?php if (!empty($settings['btn1_text'])): ?>
-                        <a class="hero-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn1_link']['url']); ?>" <?php echo $settings['btn1_link']['is_external'] ? 'target="_blank"' : ''; ?>>
-                            <span <?php echo $this->get_render_attribute_string('btn1_text'); ?>><?php echo esc_html($settings['btn1_text']); ?></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        <a class="hero-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C5A059] text-[#0B1325] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn1_link']['url']); ?>" <?php echo $settings['btn1_link']['is_external'] ? 'target="_blank"' : ''; ?> style="background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; border: 1px solid var(--amac-gold, #C5A059) !important; text-decoration: none !important;">
+                            <span <?php echo $this->get_render_attribute_string('btn1_text'); ?> style="color: var(--amac-btn-text, #0B1325) !important;"><?php echo esc_html($settings['btn1_text']); ?></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amac-btn-text, #0B1325)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform" style="stroke: var(--amac-btn-text, #0B1325) !important;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                         <?php endif; ?>
 

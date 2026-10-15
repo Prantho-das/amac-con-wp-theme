@@ -322,7 +322,7 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Headings Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .amac-footer-gold' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .amac-footer-icon' => 'color: {{VALUE}} !important;',
@@ -355,10 +355,10 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 transition: color 0.3s ease;
             }
             .amac-footer-wrapper a:hover {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             .amac-footer-wrapper svg {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
                 flex-shrink: 0;
             }
             #amac-floating-quick-bar {
@@ -369,8 +369,9 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                background-color: #5D0D15;
+                background-color: var(--amac-dark, #0B1325);
                 color: #FDFCF8;
+                border: 1px solid rgba(197, 160, 89, 0.4);
                 padding: 12px 20px;
                 border-radius: 2px;
                 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
@@ -395,10 +396,10 @@ class AMAC_Footer_Widget extends \Elementor\Widget_Base {
                 transition: color 0.3s ease;
             }
             #amac-floating-quick-bar a:hover {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             #amac-floating-quick-bar svg {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             #amac-floating-quick-bar .divider {
                 color: rgba(197, 160, 89, 0.4);

@@ -2,16 +2,23 @@
 /**
  * Plugin Name: AMAC Builders Elementor Core
  * Description: Custom pixel-perfect Elementor widgets for AMAC Builders. Every text, button, image, and style is 100% dynamic.
- * Version: 2.2.0
+ * Version: 2.3.2
  * Author: Jarvis
  * Text Domain: amac-builders
  */
 
 if (!defined('ABSPATH')) exit;
 
+if (!defined('AMAC_BUILDERS_PLUGIN_DIR')) {
+    define('AMAC_BUILDERS_PLUGIN_DIR', plugin_dir_path(__FILE__));
+}
+if (!defined('AMAC_BUILDERS_PLUGIN_URL')) {
+    define('AMAC_BUILDERS_PLUGIN_URL', plugin_dir_url(__FILE__));
+}
+
 final class AMAC_Elementor_Extension {
 
-    const VERSION = '2.2.0';
+    const VERSION = '2.3.2';
     const MINIMUM_ELEMENTOR_VERSION = '3.0.0';
     const MINIMUM_PHP_VERSION = '7.4';
 
@@ -26,9 +33,29 @@ final class AMAC_Elementor_Extension {
 
     public function __construct() {
         add_action('plugins_loaded', [$this, 'init']);
+        register_activation_hook(__FILE__, [$this, 'purge_cache']);
+        register_deactivation_hook(__FILE__, [$this, 'purge_cache']);
+    }
+
+    public function purge_cache() {
+        if (has_action('litespeed_purge_all')) {
+            do_action('litespeed_purge_all');
+        }
+        if (function_exists('wp_cache_flush')) {
+            wp_cache_flush();
+        }
     }
 
     public function init() {
+        // Auto purge cache on version mismatch
+        $installed_ver = get_option('amac_builders_version', '0');
+        if (version_compare($installed_ver, self::VERSION, '<')) {
+            update_option('amac_builders_version', self::VERSION);
+            $this->purge_cache();
+        }
+
+        require_once(__DIR__ . '/includes/theme-config.php');
+        require_once(__DIR__ . '/includes/admin-settings.php');
         if (!did_action('elementor/loaded')) {
             add_action('admin_notices', [$this, 'admin_notice_missing_main_plugin']);
             return;

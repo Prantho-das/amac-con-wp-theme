@@ -95,7 +95,7 @@ class AMAC_About_CTA_Widget extends \Elementor\Widget_Base {
         <section class="relative py-20 md:py-28 overflow-hidden w-full">
             <div class="absolute inset-0">
                 <img src="<?php echo esc_url($bg_url); ?>" alt="Background" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-[#5D0D15]/80"></div>
+                <div class="absolute inset-0 bg-[#0B1325]/85"></div>
             </div>
             <div class="relative z-10 max-w-3xl mx-auto px-6 md:px-8 text-center">
                 <p class="text-[#C5A059] text-xs tracking-[0.35em] uppercase mb-6" <?php echo $this->get_render_attribute_string('cta_eyebrow'); ?>>

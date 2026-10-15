@@ -105,7 +105,8 @@ class AMAC_CTA_Widget extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-        $bg_url = !empty($settings['bg_image']['url']) ? $settings['bg_image']['url'] : '';
+        $fallback_cta_bg = defined('AMAC_BUILDERS_PLUGIN_URL') ? AMAC_BUILDERS_PLUGIN_URL . 'assets/images/img_1674723180.png' : plugins_url('assets/images/img_1674723180.png', dirname(__DIR__) . '/amac-builders-addon.php');
+        $bg_url = !empty($settings['bg_image']['url']) ? $settings['bg_image']['url'] : $fallback_cta_bg;
         $clean_phone = preg_replace('/[^0-9]/', '', $settings['phone_number']);
 
         $this->add_inline_editing_attributes('eyebrow', 'none');
@@ -140,9 +141,9 @@ class AMAC_CTA_Widget extends \Elementor\Widget_Base {
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <?php if (!empty($settings['btn_text'])): ?>
-                        <a class="amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
-                            <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        <a class="amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C5A059] text-[#0B1325] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; border: 1px solid var(--amac-gold, #C5A059) !important; text-decoration: none !important;">
+                            <span <?php echo $this->get_render_attribute_string('btn_text'); ?> style="color: var(--amac-btn-text, #0B1325) !important;"><?php echo esc_html($settings['btn_text']); ?></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--amac-btn-text, #0B1325)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform" style="stroke: var(--amac-btn-text, #0B1325) !important;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                         <?php endif; ?>
 

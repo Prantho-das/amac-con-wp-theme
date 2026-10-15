@@ -145,7 +145,7 @@ class AMAC_About_Story_Widget extends \Elementor\Widget_Base {
                         <p class="text-[#C5A059] text-xs tracking-[0.35em] uppercase mb-4" <?php echo $this->get_render_attribute_string('story_eyebrow'); ?>>
                             <?php echo esc_html($settings['story_eyebrow']); ?>
                         </p>
-                        <h2 class="font-display text-3xl md:text-4xl font-semibold text-[#5D0D15] leading-tight mb-6">
+                        <h2 class="font-display text-3xl md:text-4xl font-semibold text-[#0B1325] leading-tight mb-6">
                             <span <?php echo $this->get_render_attribute_string('story_title_line1'); ?>><?php echo esc_html($settings['story_title_line1']); ?></span><br>
                             <span class="text-[#C5A059]" <?php echo $this->get_render_attribute_string('story_title_highlight'); ?>><?php echo esc_html($settings['story_title_highlight']); ?></span>
                         </h2>

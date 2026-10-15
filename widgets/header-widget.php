@@ -266,7 +266,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 color: #1A1A1A !important;
             }
             #amac-site-header a.desktop-nav-link:hover {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             #amac-site-header #header-logo-text {
                 font-family: "Fraunces", Georgia, serif !important;
@@ -277,24 +277,28 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 transition: color 0.5s ease !important;
             }
             #amac-site-header.is-scrolled #header-logo-text {
-                color: #5D0D15 !important;
+                color: var(--amac-btn-text, #0B1325) !important;
             }
             .header-quote-btn {
                 margin-left: 1rem !important;
                 padding: 0.625rem 1.5rem !important;
-                background-color: #5D0D15 !important;
-                color: #FDFCF8 !important;
+                background-color: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-btn-text, #0B1325) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
+                font-weight: 600 !important;
                 font-size: 0.875rem !important;
                 letter-spacing: 0.15em !important;
                 text-transform: uppercase !important;
                 text-decoration: none !important;
-                transition: background-color 0.3s ease !important;
+                transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
                 display: inline-flex !important;
                 align-items: center !important;
                 justify-content: center !important;
             }
             .header-quote-btn:hover {
-                background-color: #7A1520 !important;
+                background-color: var(--amac-gold-hover, #B38728) !important;
+                border-color: var(--amac-gold-hover, #B38728) !important;
+                color: #FFFFFF !important;
             }
             #amac-menu-toggle {
                 display: none !important;
@@ -310,7 +314,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
             }
             .amac-hamburger-label span {
                 display: block !important;
-                background-color: #C5A059 !important;
+                background-color: var(--amac-gold, #C5A059) !important;
                 height: 2px !important;
                 margin: 5px 0 !important;
                 transition: all 0.3s ease !important;
@@ -336,7 +340,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 width: 100vw !important;
                 height: 100vh !important;
                 height: 100dvh !important;
-                background-color: #5D0D15 !important;
+                background-color: var(--amac-btn-text, #0B1325) !important;
                 z-index: 2147483647 !important;
                 flex-direction: column !important;
                 justify-content: space-between !important;
@@ -385,8 +389,8 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                     endif;
                     ?>
                     <?php if (!empty($settings['btn_text'])): ?>
-                    <a class="header-quote-btn ml-4 px-6 py-2.5 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.15em] uppercase hover:bg-[#7A1520] transition-colors duration-300" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
-                        <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
+                    <a class="header-quote-btn ml-4 px-6 py-2.5 bg-[#C5A059] text-[#0B1325] text-sm tracking-[0.15em] uppercase hover:bg-[#B38728] hover:text-white transition-colors duration-300" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none !important; background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; border: 1px solid var(--amac-gold, #C5A059) !important;">
+                        <span <?php echo $this->get_render_attribute_string('btn_text'); ?> style="color: var(--amac-btn-text, #0B1325) !important;"><?php echo esc_html($settings['btn_text']); ?></span>
                     </a>
                     <?php endif; ?>
                 </nav>
@@ -407,7 +411,7 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 <?php else: ?>
                     <span style="font-family: 'Fraunces', Georgia, serif !important; font-size: 1.25rem !important; color: #FDFCF8 !important; font-weight: 600 !important; letter-spacing: 0.05em !important;"><?php echo esc_html($settings['logo_text']); ?></span>
                 <?php endif; ?>
-                <label for="amac-menu-toggle" id="close-mobile-menu" aria-label="Close menu" onclick="var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" style="background: transparent !important; border: none !important; cursor: pointer !important; padding: 8px !important; color: #C5A059 !important; outline: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;">
+                <label for="amac-menu-toggle" id="close-mobile-menu" aria-label="Close menu" onclick="var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" style="background: transparent !important; border: none !important; cursor: pointer !important; padding: 8px !important; color: var(--amac-gold, #C5A059) !important; outline: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </label>
             </div>
@@ -424,14 +428,14 @@ class AMAC_Header_Widget extends \Elementor\Widget_Base {
                 endif;
                 ?>
                 <?php if (!empty($settings['btn_text'])): ?>
-                    <a href="<?php echo esc_url($settings['btn_link']['url']); ?>" onclick="document.getElementById('amac-menu-toggle').checked=false; var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" class="header-quote-btn" style="text-decoration: none !important; background-color: #5D0D15 !important; color: #FFFFFF !important; padding: 14px 36px !important; font-size: 12px !important; letter-spacing: 0.2em !important; font-weight: 600 !important; text-transform: uppercase !important; margin-top: 12px !important; display: inline-block !important; border: 1px solid #C5A059 !important;">
+                    <a href="<?php echo esc_url($settings['btn_link']['url']); ?>" onclick="document.getElementById('amac-menu-toggle').checked=false; var d=document.getElementById('mobile-menu-drawer'); if(d){ d.classList.remove('is-open'); }" class="header-quote-btn" style="text-decoration: none !important; background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; padding: 14px 36px !important; font-size: 12px !important; letter-spacing: 0.2em !important; font-weight: 600 !important; text-transform: uppercase !important; margin-top: 12px !important; display: inline-block !important; border: 1px solid var(--amac-gold, #C5A059) !important;">
                         <?php echo esc_html($settings['btn_text']); ?>
                     </a>
                 <?php endif; ?>
             </nav>
             <?php if (!empty($settings['phone_number'])): ?>
             <div style="padding: 0 24px 40px !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important; flex-shrink: 0 !important;">
-                <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', $settings['phone_number'])); ?>" style="text-decoration: none !important; color: #C5A059 !important; font-size: 14px !important; letter-spacing: 0.2em !important;">
+                <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', $settings['phone_number'])); ?>" style="text-decoration: none !important; color: var(--amac-gold, #C5A059) !important; font-size: 14px !important; letter-spacing: 0.2em !important;">
                     <?php echo esc_html($settings['phone_number']); ?>
                 </a>
             </div>

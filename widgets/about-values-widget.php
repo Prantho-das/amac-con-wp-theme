@@ -156,13 +156,41 @@ class AMAC_About_Values_Widget extends \Elementor\Widget_Base {
         $this->add_inline_editing_attributes('values_eyebrow', 'none');
         $this->add_inline_editing_attributes('values_title', 'none');
         ?>
+        <style>
+            .amac-values-wrapper .amac-values-icon-box {
+                width: 56px !important;
+                height: 56px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                background-color: var(--amac-dark, #0B1325) !important;
+                border: 1px solid rgba(197, 160, 89, 0.45) !important;
+                margin: 0 auto 20px auto !important;
+                border-radius: 4px !important;
+                box-shadow: 0 4px 12px rgba(11, 19, 37, 0.08) !important;
+                transition: transform 0.3s ease, border-color 0.3s ease !important;
+            }
+            .amac-values-wrapper .amac-values-icon-box:hover {
+                transform: translateY(-3px) !important;
+                border-color: var(--amac-gold, #C5A059) !important;
+            }
+            .amac-values-wrapper .amac-values-icon-box svg {
+                width: 26px !important;
+                height: 26px !important;
+                stroke: var(--amac-gold, #C5A059) !important;
+                color: var(--amac-gold, #C5A059) !important;
+                fill: none !important;
+                stroke-width: 2.2px !important;
+                display: block !important;
+            }
+        </style>
         <section class="amac-values-wrapper py-20 md:py-28 bg-[#F5F1EB] w-full">
             <div class="max-w-7xl mx-auto px-6 md:px-8">
                 <div class="mb-12 md:mb-16">
                     <p class="text-xs tracking-[0.35em] uppercase mb-4 text-[#C5A059]" <?php echo $this->get_render_attribute_string('values_eyebrow'); ?>>
                         <?php echo esc_html($settings['values_eyebrow']); ?>
                     </p>
-                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#5D0D15]" <?php echo $this->get_render_attribute_string('values_title'); ?>>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#0B1325]" <?php echo $this->get_render_attribute_string('values_title'); ?>>
                         <?php echo esc_html($settings['values_title']); ?>
                     </h2>
                     <div class="mt-6 h-[2px] w-16 bg-[#C5A059]"></div>
@@ -178,18 +206,18 @@ class AMAC_About_Values_Widget extends \Elementor\Widget_Base {
                             $this->add_inline_editing_attributes($desc_key, 'basic');
                     ?>
                         <div class="text-center">
-                            <div class="w-14 h-14 mx-auto flex items-center justify-center bg-[#5D0D15]/5 mb-5">
+                            <div class="amac-values-icon-box w-14 h-14 mx-auto flex items-center justify-center mb-5" style="width: 56px !important; height: 56px !important; display: flex !important; align-items: center !important; justify-content: center !important; background-color: var(--amac-dark, #0B1325) !important; border: 1px solid rgba(197, 160, 89, 0.45) !important; margin: 0 auto 20px auto !important;">
                                 <?php if ($item['icon_svg'] === 'shield'): ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px !important; height: 28px !important; stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important; fill: none !important; stroke-width: 2px !important; display: block !important;" class="w-7 h-7 text-[#C5A059]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
                                 <?php elseif ($item['icon_svg'] === 'award'): ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px !important; height: 28px !important; stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important; fill: none !important; stroke-width: 2px !important; display: block !important;" class="w-7 h-7 text-[#C5A059]"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
                                 <?php elseif ($item['icon_svg'] === 'users'): ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px !important; height: 28px !important; stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important; fill: none !important; stroke-width: 2px !important; display: block !important;" class="w-7 h-7 text-[#C5A059]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                 <?php else: ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px !important; height: 28px !important; stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important; fill: none !important; stroke-width: 2px !important; display: block !important;" class="w-7 h-7 text-[#C5A059]"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                 <?php endif; ?>
                             </div>
-                            <h3 class="font-display text-lg text-[#5D0D15] font-semibold mb-3" <?php echo $this->get_render_attribute_string($title_key); ?>>
+                            <h3 class="font-display text-lg text-[#0B1325] font-semibold mb-3" <?php echo $this->get_render_attribute_string($title_key); ?>>
                                 <?php echo esc_html($item['title']); ?>
                             </h3>
                             <p class="text-[#1A1A1A]/60 text-sm leading-relaxed" <?php echo $this->get_render_attribute_string($desc_key); ?>>

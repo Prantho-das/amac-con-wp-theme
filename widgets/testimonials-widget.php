@@ -358,7 +358,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Section Background', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#5D0D15',
+                'default' => AMAC_Theme_Config::get_dark(),
                 'selectors' => [
                     '{{WRAPPER}} .testimonials-wrapper' => 'background-color: {{VALUE}};',
                 ],
@@ -470,7 +470,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Location Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .amac-testimonial-location' => 'color: {{VALUE}};',
                 ],
@@ -505,7 +505,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Arrow Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .amac-swiper-btn' => 'color: {{VALUE}};',
                 ],
@@ -553,7 +553,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Arrow Hover Background', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .amac-swiper-btn:hover' => 'background-color: {{VALUE}}; border-color: {{VALUE}};',
                 ],
@@ -565,7 +565,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Dots Active Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .swiper-pagination-bullet-active' => 'background-color: {{VALUE}} !important;',
                 ],
@@ -600,7 +600,7 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
         $show_arrows = ($settings['show_arrows'] === 'yes');
         $show_dots = ($settings['show_dots'] === 'yes');
         ?>
-        <section id="testimonials" class="testimonials-wrapper py-20 md:py-32 bg-[#5D0D15] overflow-hidden" style="scroll-margin-top: 80px;">
+        <section id="testimonials" class="testimonials-wrapper py-20 md:py-32 bg-[#0B1325] overflow-hidden" style="scroll-margin-top: 80px;">
             <div class="max-w-7xl mx-auto px-6 md:px-8 amac-testimonials-slider-wrapper relative">
                 
                 <!-- Section Header with Action Bar -->
@@ -620,10 +620,10 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
                     <?php if ($show_arrows && $arrows_pos === 'header_right'): ?>
                     <!-- Header Action Bar (Navigation Controls) -->
                     <div class="flex items-center gap-3 self-start md:self-end">
-                        <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer focus:outline-none">
+                        <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                         </button>
-                        <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer focus:outline-none">
+                        <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                         </button>
                     </div>
@@ -633,10 +633,10 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
                 <!-- Swiper Carousel Container -->
                 <div class="relative">
                     <?php if ($show_arrows && $arrows_pos === 'sides'): ?>
-                    <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#5D0D15]/90 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer shadow-lg">
+                    <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#0B1325]/90 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                     </button>
-                    <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#5D0D15]/90 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer shadow-lg">
+                    <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#C5A059]/30 bg-[#0B1325]/90 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                     </button>
                     <?php endif; ?>
@@ -679,10 +679,10 @@ class AMAC_Testimonials_Widget extends \Elementor\Widget_Base {
                 <div class="mt-10 flex flex-col items-center justify-center gap-6">
                     <?php if ($show_arrows && $arrows_pos === 'bottom_center'): ?>
                     <div class="flex items-center gap-4">
-                        <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn w-11 h-11 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer">
+                        <button type="button" aria-label="Previous Slide" class="amac-swiper-prev amac-swiper-btn w-11 h-11 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                         </button>
-                        <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn w-11 h-11 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#5D0D15] hover:border-[#C5A059] cursor-pointer">
+                        <button type="button" aria-label="Next Slide" class="amac-swiper-next amac-swiper-btn w-11 h-11 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] flex items-center justify-center transition-all duration-300 hover:bg-[#C5A059] hover:text-[#0B1325] hover:border-[#C5A059] cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                         </button>
                     </div>

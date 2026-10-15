@@ -215,27 +215,33 @@ class AMAC_Services_Ledger_Widget extends \Elementor\Widget_Base {
                 transition: background-color 0.3s ease !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item.is-open .ledger-icon-box {
-                background-color: #5D0D15 !important;
+                background-color: var(--amac-dark, #0B1325) !important;
+                border: 1px solid var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item.is-open .ledger-icon-box svg {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
+                stroke: var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item:not(.is-open) .ledger-icon-box {
-                background-color: rgba(93, 13, 21, 0.05) !important;
+                background-color: var(--amac-dark, #0B1325) !important;
+                border: 1px solid rgba(197, 160, 89, 0.35) !important;
+                opacity: 0.9 !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item:not(.is-open):hover .ledger-icon-box {
-                background-color: rgba(93, 13, 21, 0.1) !important;
+                opacity: 1 !important;
+                border-color: var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item:not(.is-open) .ledger-icon-box svg {
-                color: #5D0D15 !important;
+                color: var(--amac-gold, #C5A059) !important;
+                stroke: var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item.is-open .ledger-chevron {
                 transform: rotate(180deg) !important;
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item:not(.is-open) .ledger-chevron {
                 transform: rotate(0deg) !important;
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .ledger-item.is-open .ledger-body {
                 display: block !important;
@@ -248,11 +254,11 @@ class AMAC_Services_Ledger_Widget extends \Elementor\Widget_Base {
                 font-size: 1.5rem !important;
                 line-height: 2rem !important;
                 font-weight: 600 !important;
-                color: #5D0D15 !important;
+                color: var(--amac-btn-text, #0B1325) !important;
                 margin: 0 !important;
             }
             #services-ledger-<?php echo esc_attr($widget_id); ?> .service-sub {
-                color: #C5A059 !important;
+                color: var(--amac-gold, #C5A059) !important;
                 font-size: 0.875rem !important;
                 line-height: 1.25rem !important;
                 letter-spacing: 0.05em !important;
@@ -352,7 +358,7 @@ class AMAC_Services_Ledger_Widget extends \Elementor\Widget_Base {
                             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3" style="list-style: none; padding: 0; margin: 0;">
                                 <?php foreach ($lines as $line): ?>
                                 <li class="flex items-start gap-3 text-sm text-[#1A1A1A]/60">
-                                    <span class="block w-1.5 h-1.5 bg-[#C5A059] rounded-full mt-1.5 shrink-0" style="width: 6px; height: 6px; border-radius: 50%; background-color: #C5A059; margin-top: 6px; flex-shrink: 0;"></span>
+                                    <span class="block w-1.5 h-1.5 bg-[#C5A059] rounded-full mt-1.5 shrink-0" style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--amac-gold, #C5A059); margin-top: 6px; flex-shrink: 0;"></span>
                                     <?php echo esc_html($line); ?>
                                 </li>
                                 <?php endforeach; ?>
@@ -369,9 +375,9 @@ class AMAC_Services_Ledger_Widget extends \Elementor\Widget_Base {
                 <?php if (!empty($settings['btn_text'])): ?>
                 <div class="mt-16 text-center">
                     <p class="text-[#1A1A1A]/60 text-base mb-6"><?php echo esc_html($settings['cta_text']); ?></p>
-                    <a class="hero-btn-primary amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#5D0D15] text-[#FDFCF8] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none;">
-                        <?php echo esc_html($settings['btn_text']); ?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    <a class="hero-btn-primary amac-btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C5A059] text-[#0B1325] text-sm tracking-[0.2em] uppercase transition-all duration-300 group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?> style="text-decoration: none !important; background-color: var(--amac-gold, #C5A059) !important; color: var(--amac-btn-text, #0B1325) !important; border: 1px solid var(--amac-gold, #C5A059) !important;">
+                        <span style="color: var(--amac-btn-text, #0B1325) !important;"><?php echo esc_html($settings['btn_text']); ?></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--amac-btn-text, #0B1325)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform" style="stroke: var(--amac-btn-text, #0B1325) !important;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </a>
                 </div>
                 <?php endif; ?>

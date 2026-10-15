@@ -126,7 +126,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Title Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#5D0D15',
+                'default' => AMAC_Theme_Config::get_dark(),
                 'selectors' => [
                     '{{WRAPPER}} .craft-title' => 'color: {{VALUE}};',
                 ],
@@ -138,7 +138,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Accent Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .craft-gold' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .craft-gold-border' => 'border-color: {{VALUE}};',
@@ -152,7 +152,8 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
-        $img_url = !empty($settings['feature_image']['url']) ? $settings['feature_image']['url'] : '';
+        $fallback_img = defined('AMAC_BUILDERS_PLUGIN_URL') ? AMAC_BUILDERS_PLUGIN_URL . 'assets/images/img_1222443232.png' : plugins_url('assets/images/img_1222443232.png', dirname(__DIR__) . '/amac-builders-addon.php');
+        $img_url = !empty($settings['feature_image']['url']) ? $settings['feature_image']['url'] : $fallback_img;
 
         $this->add_inline_editing_attributes('eyebrow', 'none');
         $this->add_inline_editing_attributes('title_main', 'none');
@@ -185,7 +186,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
                         </p>
                         <?php endif; ?>
 
-                        <h2 class="craft-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-[#5D0D15] leading-tight mb-6">
+                        <h2 class="craft-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0B1325] leading-tight mb-6">
                             <span <?php echo $this->get_render_attribute_string('title_main'); ?>><?php echo esc_html($settings['title_main']); ?></span><br>
                             <span class="craft-gold text-[#C5A059]" <?php echo $this->get_render_attribute_string('title_highlight'); ?>><?php echo esc_html($settings['title_highlight']); ?></span>
                         </h2>
@@ -205,7 +206,7 @@ class AMAC_Craftsmanship_Widget extends \Elementor\Widget_Base {
                         <?php endif; ?>
 
                         <?php if (!empty($settings['btn_text'])): ?>
-                        <a class="craft-title inline-flex items-center gap-3 text-[#5D0D15] text-sm tracking-[0.15em] uppercase hover:text-[#C5A059] transition-colors group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                        <a class="craft-title inline-flex items-center gap-3 text-[#0B1325] text-sm tracking-[0.15em] uppercase hover:text-[#C5A059] transition-colors group" href="<?php echo esc_url($settings['btn_link']['url']); ?>" <?php echo $settings['btn_link']['is_external'] ? 'target="_blank"' : ''; ?>>
                             <span <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>

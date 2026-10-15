@@ -159,7 +159,7 @@ class AMAC_Services_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Title Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#5D0D15',
+                'default' => AMAC_Theme_Config::get_dark(),
                 'selectors' => [
                     '{{WRAPPER}} .services-heading' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .service-card-title' => 'color: {{VALUE}};',
@@ -172,7 +172,7 @@ class AMAC_Services_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Gold Accent Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .service-gold' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .service-gold-bg' => 'background-color: {{VALUE}};',
@@ -197,7 +197,7 @@ class AMAC_Services_Widget extends \Elementor\Widget_Base {
                     <p class="service-gold text-xs tracking-[0.35em] uppercase mb-4 text-[#C5A059]" <?php echo $this->get_render_attribute_string('eyebrow'); ?>><?php echo esc_html($settings['eyebrow']); ?></p>
                     <?php endif; ?>
 
-                    <h2 class="services-heading font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#5D0D15]" <?php echo $this->get_render_attribute_string('title'); ?>><?php echo esc_html($settings['title']); ?></h2>
+                    <h2 class="services-heading font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#0B1325]" <?php echo $this->get_render_attribute_string('title'); ?>><?php echo esc_html($settings['title']); ?></h2>
 
                     <?php if (!empty($settings['description'])): ?>
                     <p class="mt-5 text-base md:text-lg leading-relaxed max-w-2xl text-[#1A1A1A]/60" <?php echo $this->get_render_attribute_string('description'); ?>><?php echo esc_html($settings['description']); ?></p>
@@ -217,21 +217,21 @@ class AMAC_Services_Widget extends \Elementor\Widget_Base {
                     ?>
                     <div class="group">
                         <div class="bg-[#FDFCF8] p-8 md:p-10 border border-[#C5A059]/20 hover:border-[#C5A059]/50 transition-all duration-500 h-full flex flex-col">
-                            <div class="w-12 h-12 flex items-center justify-center bg-[#5D0D15]/5 mb-6">
+                            <div class="w-12 h-12 flex items-center justify-center bg-[#0B1325] border border-[#C5A059]/40 mb-6 transition-all duration-300 group-hover:border-[#C5A059] group-hover:scale-105" style="background-color: var(--amac-dark, #0B1325) !important; border: 1px solid rgba(197, 160, 89, 0.4) !important;">
                                 <?php if ($item['icon_type'] === 'wrench'): ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                                 <?php elseif ($item['icon_type'] === 'hammer'): ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important;"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
                                 <?php else: ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#5D0D15]"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amac-gold, #C5A059)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--amac-gold, #C5A059) !important; color: var(--amac-gold, #C5A059) !important;"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
                                 <?php endif; ?>
                             </div>
 
-                            <h3 class="service-card-title font-display text-xl text-[#5D0D15] font-semibold mb-4" <?php echo $this->get_render_attribute_string($title_key); ?>><?php echo esc_html($item['title']); ?></h3>
+                            <h3 class="service-card-title font-display text-xl text-[#0B1325] font-semibold mb-4" <?php echo $this->get_render_attribute_string($title_key); ?>><?php echo esc_html($item['title']); ?></h3>
                             <p class="text-[#1A1A1A]/60 text-base leading-relaxed flex-1" <?php echo $this->get_render_attribute_string($desc_key); ?>><?php echo esc_html($item['desc']); ?></p>
 
                             <div class="mt-6 pt-6 border-t border-[#C5A059]/15">
-                                <a class="inline-flex items-center gap-2 text-[#5D0D15] text-xs tracking-[0.15em] uppercase hover:text-[#C5A059] transition-colors group/link" href="<?php echo esc_url($item['link']['url']); ?>" <?php echo $item['link']['is_external'] ? 'target="_blank"' : ''; ?>>
+                                <a class="inline-flex items-center gap-2 text-[#0B1325] text-xs tracking-[0.15em] uppercase hover:text-[#C5A059] transition-colors group/link" href="<?php echo esc_url($item['link']['url']); ?>" <?php echo $item['link']['is_external'] ? 'target="_blank"' : ''; ?>>
                                     Learn More
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                                 </a>

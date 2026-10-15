@@ -147,7 +147,7 @@ class AMAC_About_Timeline_Widget extends \Elementor\Widget_Base {
                     <p class="text-xs tracking-[0.35em] uppercase mb-4 text-[#C5A059]" <?php echo $this->get_render_attribute_string('timeline_eyebrow'); ?>>
                         <?php echo esc_html($settings['timeline_eyebrow']); ?>
                     </p>
-                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#5D0D15]" <?php echo $this->get_render_attribute_string('timeline_title'); ?>>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#0B1325]" <?php echo $this->get_render_attribute_string('timeline_title'); ?>>
                         <?php echo esc_html($settings['timeline_title']); ?>
                     </h2>
                     <div class="mt-6 h-[2px] w-16 bg-[#C5A059]"></div>
@@ -163,7 +163,7 @@ class AMAC_About_Timeline_Widget extends \Elementor\Widget_Base {
                                 $this->add_inline_editing_attributes($desc_key, 'basic');
                         ?>
                             <div class="flex gap-6 md:gap-8 items-start">
-                                <div class="relative z-10 w-8 md:w-12 h-8 md:h-12 shrink-0 bg-[#5D0D15] flex items-center justify-center">
+                                <div class="relative z-10 w-8 md:w-12 h-8 md:h-12 shrink-0 bg-[#0B1325] border border-[#C5A059]/30 flex items-center justify-center">
                                     <span class="text-[#C5A059] text-[10px] md:text-xs font-semibold"><?php echo esc_html($item['year']); ?></span>
                                 </div>
                                 <p class="text-[#1A1A1A]/70 text-base leading-relaxed pt-1 md:pt-2.5" <?php echo $this->get_render_attribute_string($desc_key); ?>>

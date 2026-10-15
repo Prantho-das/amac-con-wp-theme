@@ -67,7 +67,7 @@ class AMAC_Page_Banner_Widget extends \Elementor\Widget_Base {
         $this->add_inline_editing_attributes('title', 'none');
         $this->add_inline_editing_attributes('description', 'basic');
         ?>
-        <section class="bg-[#5D0D15] pt-32 pb-16 md:pt-36 md:pb-20 w-full">
+        <section class="bg-[#0B1325] pt-32 pb-16 md:pt-36 md:pb-20 w-full">
             <div class="max-w-7xl mx-auto px-6 md:px-8">
                 <div class="mb-12 md:mb-16">
                     <?php if (!empty($settings['eyebrow'])): ?>

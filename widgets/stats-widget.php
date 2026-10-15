@@ -92,7 +92,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Background Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#5D0D15',
+                'default' => AMAC_Theme_Config::get_dark(),
                 'selectors' => [
                     '{{WRAPPER}} .stats-wrapper' => 'background-color: {{VALUE}};',
                 ],
@@ -104,7 +104,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__('Number Color', 'amac-builders'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#C5A059',
+                'default' => AMAC_Theme_Config::get_gold(),
                 'selectors' => [
                     '{{WRAPPER}} .stat-number' => 'color: {{VALUE}};',
                 ],
@@ -118,7 +118,7 @@ class AMAC_Stats_Widget extends \Elementor\Widget_Base {
         $settings = $this->get_settings_for_display();
         if (empty($settings['stats_list'])) return;
         ?>
-        <section class="stats-wrapper bg-[#5D0D15] py-12 md:py-16">
+        <section class="stats-wrapper bg-[#0B1325] py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-6 md:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
                     <?php 
